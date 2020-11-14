@@ -1,12 +1,215 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
 
-  </body>
+<body class="page__body">
+
+  <header class="page-header">
+
+    <div class="page-header__logo">
+      <a class="page-header__logo-cat">
+        <img src="https://via.placeholder.com/33x38" alt="Иконка энергичного кота">
+      </a>
+      <a class="page-header__logo-text">
+        <img src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
+      </a>
+    </div>
+
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__container">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item main-nav__list-item--active">
+            <a>Главная</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--active">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--active">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <main class="page-main">
+
+    <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков</h1>
+
+    <section class="promo">
+      <div class="promo__container">
+        <h2 class="promo__title">Функциональное питание для котов</h2>
+        <p class="promo__slogan">Занялся собой? Займись котом!</p>
+        <a class="promo__button green-button">Подобрать программу</a>
+        <img src="https://via.placeholder.com/280x270" alt="Упаковка еды Кэт энерджи со вкусом курицы">
+      </div>
+    </section>
+
+    <section class="catalog-types">
+      <div class="catalog-types__container">
+        <h2 class="visually-hidden">Выбор каталога для достижения желаемого результата</h2>
+
+        <div class="catalog-types__item catalog-types__item--slim">
+          <h3 class="catalog-types__name">Похудение</h3>
+          <p class="catalog-types__description">Ваш кот весит больше собаки и почти утратил способность лазить по
+            деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="catalog-types__link" href="#">Каталог slim</a>
+        </div>
+
+        <div class="catalog-types__item catalog-types__item--weight">
+          <h3 class="catalog-types__name">Набор массы</h3>
+          <p class="catalog-types__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
+            Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="catalog-types__link" href="#">Каталог pro</a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="how-work">
+      <div class="how-work__container">
+        <h2 class="how-work__title section-title">Как это работает</h2>
+
+        <ul class="how-work__list">
+          <li class="how-work__item how-work__item--native">
+            <p class="how-work__description">Функциональное питание содержит только полезные питательные вещества.</p>
+          </li>
+          <li class="how-work__item how-work__item--cook">
+            <p class="how-work__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            </p>
+          </li>
+          <li class="how-work__item how-work__item--meal">
+            <p class="how-work__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+          </li>
+          <li class="how-work__item how-work__item--result">
+            <p class="how-work__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="example__container">
+        <h2 class="example__title section-title">Живой пример</h2>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
+          16 часов в день.
+        </p>
+
+        <div class="example__statistics">
+          <section class="example__item">
+            <h3 class="example__number">
+              5 кг
+            </h3>
+            <p class="example__description">
+              Снижение веса
+            </p>
+          </section>
+          <section class="example__item">
+            <h3 class="example__number">
+              60 дней
+            </h3>
+            <p class="example__description">
+              Затрачено времени
+            </p>
+          </section>
+          <div class="example__item-price">
+            <p class="example__description-price">Затраты на питание: 15 000 РУБ.</p>
+          </div>
+          </dl>
+
+          <div class="example__slider">
+            <!--Слайдер-->
+
+            <ol class="example__slides">
+              <!--Слайды-->
+              <li class="example__slide example__slide-past">
+                <img src="https://via.placeholder.com/311x232" alt="Фотография Бориса до употребления Кэт энерджи">
+              </li>
+              <li class="example__slide example__slide-present" alt="Фотография Бориса после употребления Кэт энерджи">
+                <img src="https://via.placeholder.com/251x240">
+              </li>
+            </ol>
+
+            <div class="example__slider-controls">
+              <!--Строка(кнопки) управления-->
+              <button class="example__slide-past" type="button">Было
+              </button>
+              <div class="example__range slider-range">
+                <button class="slider-range__toggle" type="button"></button>
+                <div class="slider-range__scale">
+                  <div class="slider-range__bar"></div>
+                </div>
+              </div>
+              <button class="example__slide-present" type="button">Стало
+              </button>
+              <!--Признаюсь честно: что-то похожее делали на прошлом курсе..попробовала переделать под этот макет-->
+            </div>
+
+          </div>
+
+        </div>
+    </section>
+
+    <section class="contacts">
+      <div class="contacts-container">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts-slogan">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <a class="contacts-map" href="#">
+          <img src="https://via.placeholder.com/320x362"
+            alt="Карта офиса по адресу Большая Конюшенная улица, 19/8 в Санкт-Петербурге">
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <div class="page-footer__logo footer-logo">
+        <a class="footer-logo__link">
+          <img src="https://via.placeholder.com/128x24" alt="Кэт энерджи">
+        </a>
+      </div>
+
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="#">
+              <svg aria-label="Вконтакте"></svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <svg aria-label="Фейсбук"></svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">
+              <svg aria-label="Инстаграм"></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-footer__developer developer">
+        <a class="developer-name" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <svg aria-label="HTML Academy"></svg>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
