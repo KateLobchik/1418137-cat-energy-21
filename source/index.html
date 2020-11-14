@@ -12,16 +12,16 @@
 
     <div class="page-header__logo">
       <a class="page-header__logo-cat">
-        <img src="https://via.placeholder.com/33x38">
+        <img src="https://via.placeholder.com/33x38" alt="Иконка энергичного кота">
       </a>
       <a class="page-header__logo-text">
-        <img src="https://via.placeholder.com/101x18">
+        <img src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
       </a>
     </div>
 
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hipen">Открыть меню</span>
       </button>
       <div class="main-nav__container">
         <ul class="main-nav__list">
@@ -42,20 +42,20 @@
 
   <main class="page-main">
 
-    <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков</h1>
+    <h1 class="visually-hipen">Интернет-магазин фитнес еды для котиков</h1>
 
     <section class="promo">
       <div class="promo__container">
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <a class="promo__button green-button">Подобрать программу</a>
-        <img src="https://via.placeholder.com/280x270">
+        <img src="https://via.placeholder.com/280x270" alt="Упаковка еды Кэт энерджи со вкусом курицы">
       </div>
     </section>
 
     <section class="catalog-types">
       <div class="catalog-types__container">
-        <h2 class="visually-hidden">Выбор каталога для достижения желаемого результата</h2>
+        <h2 class="visually-hipen">Выбор каталога для достижения желаемого результата</h2>
 
         <div class="catalog-types__item catalog-types__item--slim">
           <h3 class="catalog-types__name">Похудение</h3>
@@ -106,64 +106,69 @@
           16 часов в день.
         </p>
 
-        <dl class="example__statistics-list">
+        <div class="example__statistics">
           <div class="example__item">
-            <dt class="example__number">
+            <h3 class="example__number">
               5 кг
-            </dt>
-            <dd class="example__description">
+            </h3>
+            <p class="example__description">
               Снижение веса
-            </dd>
+            </p>
           </div>
           <div class="example__item">
-            <dt class="example__number">
+            <h3 class="example__number">
               60 дней
-            </dt>
-            <dd class="example__description">
+            </h3>
+            <p class="example__description">
               Затрачено времени
-            </dd>
+            </p>
           </div>
           <div class="example__item-price">
             <p class="example__description-price">Затраты на питание: 15 000 РУБ.</p>
           </div>
-        </dl>
+          </dl>
 
-        <div class="example__slider">
-          <!--Слайдер-->
+          <div class="example__slider">
+            <!--Слайдер-->
 
-          <ol class="example__slides">
-            <!--Слайды-->
-            <li class="example__slide example__slide-past">
-              <img src="https://via.placeholder.com/311x232">
-            </li>
-            <li class="example__slide example__slide-middle">
-              <img src="https://via.placeholder.com/280x270">
-              <!--Так как на десктопной версии есть промежуточный вариант-->
-            </li>
-            <li class="example__slide example__slide-present">
-              <img src="https://via.placeholder.com/251x240">
-            </li>
-          </ol>
+            <ol class="example__slides">
+              <!--Слайды-->
+              <li class="example__slide example__slide-past">
+                <img src="https://via.placeholder.com/311x232" alt="Фотография Бориса до употребления Кэт энерджи">
+              </li>
+              <li class="example__slide example__slide-present" alt="Фотография Бориса после употребления Кэт энерджи">
+                <img src="https://via.placeholder.com/251x240">
+              </li>
+            </ol>
 
-          <div class="example__slider-controls">
-            <!--Строка(кнопки) управления-->
-            <button class="example__control-button example__control-button-past" type="button">Было</button>
-            <button class="example__control-button example__control-button-middle" type="button"></button>
-            <button class="example__control-button example__control-button-present" type="button">Стало</button>
+            <div class="example__slider-controls">
+              <!--Строка(кнопки) управления-->
+              <button class="example__slide-past" type="button">
+              </button>
+              <div class="example__range slider-range">
+                <button class="slider-range__toggle" type="button"></button>
+                <div class="slider-range__scale">
+                  <div class="slider-range__bar"></div>
+                </div>
+              </div>
+              <button class="example__slide-present" type="button">
+              </button>
+              <!--Признаюсь честно: что-то похожее делали на прошлом курсе..попробовала переделать под этот макет-->
+            </div>
+
           </div>
 
         </div>
-
-      </div>
     </section>
 
     <section class="contacts">
       <div class="contacts-container">
         <h2 class="contacts__title">Контакты</h2>
         <p class="contacts-slogan">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         <a class="contacts-map" href="#">
-          <img src="https://via.placeholder.com/320x362">
+          <img src="https://via.placeholder.com/320x362"
+            alt="Карта офиса по адресу Большая Конюшенная улица, 19/8 в Санкт-Петербурге">
         </a>
       </div>
     </section>
@@ -174,7 +179,7 @@
     <div class="page-footer__container">
       <div class="page-footer__logo footer-logo">
         <a class="footer-logo__link">
-          <img src="https://via.placeholder.com/128x24">
+          <img src="https://via.placeholder.com/128x24" alt="Кэт энерджи">
         </a>
       </div>
 
@@ -182,18 +187,20 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="#">
-              <span class="visually-hidden">Вконтакте</span>
-              <!--Ниже будут изображения в svg-->
+              <span class="visually-hipen">Вконтакте</span>
+              <svg aria-label="Вконтакте"></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">
-              <span class="visually-hidden">Фейсбук</span>
+              <span class="visually-hipen">Фейсбук</span>
+              <svg aria-label="Фейсбук"></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#">
-              <span class="visually-hidden">Инстаграм</span>
+              <span class="visually-hipen">Инстаграм</span>
+              <svg aria-label="Инстаграм"></svg>
             </a>
           </li>
         </ul>
@@ -201,7 +208,7 @@
 
       <div class="page-footer__developer developer">
         <a class="developer-name" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <!--Иконка в svg-->
+        <svg aria-label="HTML Academy"></svg>
       </div>
     </div>
   </footer>
