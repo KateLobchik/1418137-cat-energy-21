@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
+
+<body class="page__body">
+
+  <header class="page-header">
+
+    <div class="page-header__logo">
+      <a class="page-header__logo-cat" href="index.html">
+        <img src="https://via.placeholder.com/33x38" alt="Иконка энергичного кота">
+      </a>
+      <a class="page-header__logo-text" href="index.html">
+        <img src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
+      </a>
+    </div>
+
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__container">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item main-nav__list-item--active">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--active">
+            <a>Каталог продукции</a>
+          </li>
+          <li class="main-nav__list-item main-nav__list-item--active">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <main class="page-main">
+
+    <div class="page-main__top-container">
+      <h1 class="page-main__title">Каталог продукции</h1>
+    </div>
+
+
+    <section class="catalog">
+      <h2 class="visually-hidden">Список товаров</h2>
+
+      <div class="catalog__container">
+
+        <article class="catalog__item item">
+          <!--В <a> прописала ссылки, т.к. в ТЗ написано, что они ведут на разные страницы. Решила, что нужно это как-то указать-->
+          <a class="item__image" href="info-item.html">
+            <img src="https://via.placeholder.com/68x86"
+              alt="Маленькая упаковка Кэт Энерджи Про для набора массы со вкусом курицы">
+          </a>
+          <div class="item__info">
+            <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy PRO 500 г</a></h3>
+            <div class="item__more-info more-info">
+              <!--Реализовала таким образом, но подумывала о таблице :) -->
+              <section class="more-info__weight">
+                <h4 class="more-info__weight-title">Масса</h4>
+                <p class="more-info__weight-data">500 г</p>
+              </section>
+              <section class="more-info__taste">
+                <h4 class="more-info__taste-title">Вкус</h4>
+                <p class="more-info__taste-data">Курица</p>
+              </section>
+              <section class="more-info__price">
+                <h4 class="more-info__price-title">Цена</h4>
+                <p class="more-info__price-data">700 р.</p>
+              </section>
+            </div>
+          </div>
+          <a class="item__button" href="buy-page.html">Заказать</a>
+        </article>
+
+        <article class="catalog__item item">
+          <a class="item__image" href="info-item.html">
+            <img src="https://via.placeholder.com/84x101"
+              alt="Большая упаковка Кэт Энерджи Про для набора массы со вкусом курицы">
+          </a>
+          <div class="item__info">
+            <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy PRO 1000 г</a></h3>
+            <div class="item__more-info more-info">
+              <section class="more-info__weight">
+                <h4 class="more-info__weight-title">Масса</h4>
+                <p class="more-info__weight-data">1000 г</p>
+              </section>
+              <section class="more-info__taste">
+                <h4 class="more-info__taste-title">Вкус</h4>
+                <p class="more-info__taste-data">Курица</p>
+              </section>
+              <section class="more-info__price">
+                <h4 class="more-info__price-title">Цена</h4>
+                <p class="more-info__price-data">1000 р.</p>
+              </section>
+            </div>
+          </div>
+          <a class="item__button" href="buy-page.html">Заказать</a>
+        </article>
+
+        <article class="catalog__item item">
+          <a class="item__image" href="info-item.html">
+            <img src="https://via.placeholder.com/68x78"
+              alt="Маленькая упаковка Кэт Энерджи Про для набора массы со вкусом рыбы">
+          </a>
+          <div class="item__info">
+            <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy PRO 500 г</a></h3>
+            <div class="item__more-info more-info">
+              <section class="more-info__weight">
+                <h4 class="more-info__weight-title">Масса</h4>
+                <p class="more-info__weight-data">500 г</p>
+              </section>
+              <section class="more-info__taste">
+                <h4 class="more-info__taste-title">Вкус</h4>
+                <p class="more-info__taste-data">Рыба</p>
+              </section>
+              <section class="more-info__price">
+                <h4 class="more-info__price-title">Цена</h4>
+                <p class="more-info__price-data">700 р.</p>
+              </section>
+            </div>
+          </div>
+          <a class="item__button" href="buy-page.html">Заказать</a>
+        </article>
+
+        <article class="catalog__item item">
+          <a class="item__image" href="info-item.html">
+            <img src="https://via.placeholder.com/84x101"
+              alt="Большая упаковка Кэт Энерджи Про для набора массы со вкусом рыбы">
+          </a>
+          <div class="item__info">
+            <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy PRO 1000 г</a></h3>
+            <div class="item__more-info more-info">
+              <section class="more-info__weight">
+                <h4 class="more-info__weight-title">Масса</h4>
+                <p class="more-info__weight-data">1000 г</p>
+              </section>
+              <section class="more-info__taste">
+                <h4 class="more-info__taste-title">Вкус</h4>
+                <p class="more-info__taste-data">Рыба</p>
+              </section>
+              <section class="more-info__price">
+                <h4 class="more-info__price-title">Цена</h4>
+                <p class="more-info__price-data">1000 р.</p>
+              </section>
+            </div>
+          </div>
+          <a class="item__button" href="buy-page.html">Заказать</a>
+        </article>
+
+        <article class="catalog__item item">
+          <a class="item__image" href="info-item.html">
+            <img src="https://via.placeholder.com/68x78"
+              alt="Маленькая упаковка Кэт Энерджи Слим для снижения веса со вкусом гречки">
+          </a>
+          <div class="item__info">
+            <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy Slim 500 г</a></h3>
+            <div class="item__more-info more-info">
+              <section class="more-info__weight">
+                <h4 class="more-info__weight-title">Масса</h4>
+                <p class="more-info__weight-data">500 г</p>
+              </section>
+              <section class="more-info__taste">
+                <h4 class="more-info__taste-title">Вкус</h4>
+                <p class="more-info__taste-data">Гречка</p>
+              </section>
+              <section class="more-info__price">
+                <h4 class="more-info__price-title">Цена</h4>
+                <p class="more-info__price-data">400 р.</p>
+              </section>
+            </div>
+          </div>
+          <a class="item__button" href="buy-page.html">Заказать</a>
+        </article>
+
+        <article class="catalog__item item">
+          <a class="item__image" href="info-item.html">
+            <img src="https://via.placeholder.com/84x100"
+              alt="Большая упаковка Кэт Энерджи Слим для снижения веса со вкусом гречки">
+          </a>
+          <div class="item__info">
+            <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy Slim 1000 г</a></h3>
+            <div class="item__more-info more-info">
+              <section class="more-info__weight">
+                <h4 class="more-info__weight-title">Масса</h4>
+                <p class="more-info__weight-data">1000 г</p>
+              </section>
+              <section class="more-info__taste">
+                <h4 class="more-info__taste-title">Вкус</h4>
+                <p class="more-info__taste-data">Гречка</p>
+              </section>
+              <section class="more-info__price">
+                <h4 class="more-info__price-title">Цена</h4>
+                <p class="more-info__price-data">700 р.</p>
+              </section>
+            </div>
+          </div>
+          <a class="item__button" href="buy-page.html">Заказать</a>
+        </article>
+
+        <article class="catalog__item item">
+          <a class="item__image" href="info-item.html">
+            <img src="https://via.placeholder.com/68x86"
+              alt="Маленькая упаковка Кэт Энерджи Слим для снижения веса со вкусом риса">
+          </a>
+          <div class="item__info">
+            <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy Slim 500 г</a></h3>
+            <div class="item__more-info more-info">
+              <section class="more-info__weight">
+                <h4 class="more-info__weight-title">Масса</h4>
+                <p class="more-info__weight-data">500 г</p>
+              </section>
+              <section class="more-info__taste">
+                <h4 class="more-info__taste-title">Вкус</h4>
+                <p class="more-info__taste-data">Рис</p>
+              </section>
+              <section class="more-info__price">
+                <h4 class="more-info__price-title">Цена</h4>
+                <p class="more-info__price-data">500 р.</p>
+              </section>
+            </div>
+          </div>
+          <a class="item__button" href="buy-page.html">Заказать</a>
+        </article>
+
+        <section class="catalog__item more-item">
+          <h3 class="more-item__class">Показать еще 100500 товаров</h3>
+          <p class="more-item__description">На самом деле вкусов гораздо больше!</p>
+          <a class="more-item__button" href="">Показать все</a>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="catalog-plus">
+      <div class="catalog-plus__container">
+        <h2 class="catalog-plus__title"></h2>
+
+        <div class="catalog-plus__list">
+
+          <article class="catalog-plus__item plus-item">
+            <h3 class="plus-item__title"><a class="plus-item__name" href="info-item.html">Сахарозаменитель</a></h3>
+            <section class="plus-item__info">
+              <h4 class="plus-item__info-description">1 упаковка (100 г)</h4>
+              <p class="plus-item__info-price">200 р.</p>
+            </section>
+            <a class="item__button" href="buy-page.html">Заказать</a>
+          </article>
+
+          <article class="catalog-plus__item plus-item">
+            <h3 class="plus-item__title"><a class="plus-item__name" href="info-item.html">Питьевая вода</a></h3>
+            <section class="plus-item__info">
+              <h4 class="plus-item__info-description">5 литров</h4>
+              <p class="plus-item__info-price">50 р.</p>
+            </section>
+            <a class="item__button" href="buy-page.html">Заказать</a>
+          </article>
+
+          <article class="catalog-plus__item plus-item">
+            <h3 class="plus-item__title"><a class="plus-item__name" href="info-item.html">Молоко</a></h3>
+            <section class="plus-item__info">
+              <h4 class="plus-item__info-description">1 литр</h4>
+              <p class="plus-item__info-price">100 р.</p>
+            </section>
+            <a class="item__button" href="buy-page.html">Заказать</a>
+          </article>
+
+          <article class="catalog-plus__item plus-item">
+            <h3 class="plus-item__title"><a class="plus-item__name" href="info-item.html">Витамины</a></h3>
+            <section class="plus-item__info">
+              <h4 class="plus-item__info-description">1 упаковка (30 г)</h4>
+              <p class="plus-item__info-price">300 р.</p>
+            </section>
+            <a class="item__button" href="buy-page.html">Заказать</a>
+          </article>
+        </div>
+
+        <div class="catalog-plus__present">
+          <p class="catalog-plus__present-slogan">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+
+    <section class="page-footer__contacts contacts">
+      <div class="contacts__container">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts-slogan">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+      <a class="contacts-map" href="#">
+        <img src="https://via.placeholder.com/320x362"
+          alt="Карта офиса по адресу Большая Конюшенная улица, 19/8 в Санкт-Петербурге">
+      </a>
+    </section>
+
+    <div class="page-footer__container">
+      <div class="page-footer__logo footer-logo">
+        <a class="footer-logo__link">
+          <img src="https://via.placeholder.com/128x24" alt="Кэт энерджи">
+        </a>
+      </div>
+
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="#">
+              <svg aria-label="Вконтакте"></svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <svg aria-label="Фейсбук"></svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">
+              <svg aria-label="Инстаграм"></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-footer__developer developer">
+        <a class="developer-name" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <svg aria-label="HTML Academy"></svg>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
