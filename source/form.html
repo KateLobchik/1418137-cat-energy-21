@@ -55,18 +55,19 @@
           <fieldset class="form__about-cat info-cat">
             <legend class="visually-hidden">Данные Вашего кота или кошки</legend>
             <p class="info-cat__item">
-              <label class="info-cat__item-title" for="cat-name">Имя:<sup>*</sup></label>
-              <input class="info-cat__field cat-name" id="cat-name" type="text" name="cat-name" placeholder="Барсик"
-                required>
+              <label class="info-cat__item-title">Имя:<sup>*</sup>
+                <input class="info-cat__field cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+              </label>
             </p>
             <p class="info-cat__item">
-              <label class="info-cat__item-title" for="cat-weight">Вес (кг):<sup>*</sup></label>
-              <input class="info-cat__field cat-weight" id="cat-weight" type="number" name="cat-weight" placeholder="7"
-                required>
+              <label class="info-cat__item-title">Вес (кг):<sup>*</sup>
+                <input class="info-cat__field cat-weight" type="number" name="cat-weight" placeholder="7" required>
+              </label>
             </p>
             <p class="info-cat__item">
-              <label class="info-cat__item-title" for="cat-age">Вес (кг):</label>
-              <input class="info-cat__field cat-age" id="cat-age" type="number" name="cat-age" placeholder="7">
+              <label class="info-cat__item-title">Вес (кг):
+                <input class="info-cat__field cat-age" type="number" name="cat-age" placeholder="7">
+              </label>
             </p>
           </fieldset>
 
@@ -74,19 +75,19 @@
             <legend class="visually-hidden">Желаемый результат</legend>
             <ul class="goal__list">
               <li class="goal__item">
-                <input class="visually-hidden goal__radio" type="radio" name="desired-goal" value="slim"
-                  id="filter-slim" checked>
-                <label class="goal__label" for="filter-slim">Похудение</label>
+                <label class="goal__label">Похудение
+                  <input class="visually-hidden goal__radio" type="radio" name="desired-goal" value="slim" checked>
+                </label>
               </li>
               <li class="goal__item">
-                <input class="visually-hidden goal__radio" type="radio" name="desired-goal" value="weight"
-                  id="filter-weight">
-                <label class="goal__label" for="filter-weight">Набор массы</label>
+                <label class="goal__label">Набор массы
+                  <input class="visually-hidden goal__radio" type="radio" name="desired-goal" value="weight">
+                </label>
               </li>
               <li class="goal__item">
-                <input class="visually-hidden goal__radio" type="radio" name="desired-goal" value="help"
-                  id="filter-help">
-                <label class="goal__label" for="filter-help">Не знаю (нужен ваш совет)</label>
+                <label class="goal__label">Не знаю (нужен ваш совет)
+                  <input class="visually-hidden goal__radio" type="radio" name="desired-goal" value="help">
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -94,14 +95,16 @@
           <fieldset class="form__feedback feedback-contacts">
             <legend class="feedback-contacts__title">Контактные данные (владельца кота)</legend>
             <p class="feedback-contacts__item">
-              <label class="feedback-contacts__item-title" for="client-email">E-mail:<sup>*</sup></label>
-              <input class="feedback-contacts__field client-email" id="client-email" name="client-email" type="email"
-                placeholder="kuklachev@gmail.com" required>
+              <label class="feedback-contacts__item-title">E-mail:<sup>*</sup>
+                <input class="feedback-contacts__field client-email" name="client-email" type="email"
+                  placeholder="kuklachev@gmail.com" required>
+              </label>
             </p>
             <p class="feedback-contacts__item">
-              <label class="feedback-contacts__item-title" for="client-tel">Телефон:<sup>*</sup></label>
-              <input class="feedback-contacts__field client-tel" id="client-tel" name="client-tel" type="tel"
-                pattern="8 [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" required>
+              <label class="feedback-contacts__item-title">Телефон:<sup>*</sup>
+                <input class="feedback-contacts__field client-tel" name="client-tel" type="tel"
+                  pattern="8 [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" required>
+              </label>
             </p>
           </fieldset>
 
@@ -115,22 +118,24 @@
             <legend class="additionally__title">Дополнительно</legend>
             <ul class="additionally__list">
               <li class="additionally__item">
-                <input class="visually-hidden additionally__checkbox" type="checkbox" name="sweetener"
-                  id="filter-sweetener" checked>
-                <label class="additionally__label" for="filter-sweetener">Cахарозаменитель</label>
+                <label class="additionally__label">Cахарозаменитель
+                  <input class="visually-hidden additionally__checkbox" type="checkbox" name="sweetener" checked>
+                </label>
               </li>
               <li class="additionally__item">
-                <input class="visually-hidden additionally__checkbox" type="checkbox" name="water" id="filter-water">
-                <label class="additionally__label" for="filter-water">Питьевая вода</label>
+                <label class="additionally__label">Питьевая вода
+                  <input class="visually-hidden additionally__checkbox" type="checkbox" name="water">
+                </label>
               </li>
               <li class="additionally__item">
-                <input class="visually-hidden additionally__checkbox" type="checkbox" name="milk" id="filter-milk">
-                <label class="additionally__label" for="filter-milk">Молоко</label>
+                <label class="additionally__label">Молоко
+                  <input class="visually-hidden additionally__checkbox" type="checkbox" name="milk">
+                </label>
               </li>
               <li class="additionally__item">
-                <input class="visually-hidden additionally__checkbox" type="checkbox" name="vitamins"
-                  id="filter-vitamins">
-                <label class="additionally__label" for="filter-vitamins">Витамины</label>
+                <label class="additionally__label">Витамины
+                  <input class="visually-hidden additionally__checkbox" type="checkbox" name="vitamins">
+                </label>
               </li>
             </ul>
           </fieldset>
