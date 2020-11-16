@@ -13,16 +13,12 @@
     <div class="page-header__logo">
       <a class="page-header__logo-cat" href="index.html">
         <img src="https://via.placeholder.com/33x38" alt="Иконка энергичного кота">
-      </a>
-      <a class="page-header__logo-text" href="index.html">
         <img src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
       </a>
     </div>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <div class="main-nav__container">
         <ul class="main-nav__list">
           <li class="main-nav__list-item main-nav__list-item--active">
@@ -53,28 +49,26 @@
       <div class="catalog__container">
 
         <article class="catalog__item item">
-          <!--В <a> прописала ссылки, т.к. в ТЗ написано, что они ведут на разные страницы. Решила, что нужно это как-то указать-->
           <a class="item__image" href="info-item.html">
             <img src="https://via.placeholder.com/68x86"
               alt="Маленькая упаковка Кэт Энерджи Про для набора массы со вкусом курицы">
           </a>
           <div class="item__info">
             <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy PRO 500 г</a></h3>
-            <div class="item__more-info more-info">
-              <!--Реализовала таким образом, но подумывала о таблице :) -->
-              <section class="more-info__weight">
-                <h4 class="more-info__weight-title">Масса</h4>
-                <p class="more-info__weight-data">500 г</p>
-              </section>
-              <section class="more-info__taste">
-                <h4 class="more-info__taste-title">Вкус</h4>
-                <p class="more-info__taste-data">Курица</p>
-              </section>
-              <section class="more-info__price">
-                <h4 class="more-info__price-title">Цена</h4>
-                <p class="more-info__price-data">700 р.</p>
-              </section>
-            </div>
+            <table class="item__more-info more-info">
+              <tr class="more-info__weight">
+                <td class="more-info__weight-title">Масса</td>
+                <td class="more-info__weight-data">500 г</td>
+              </tr>
+              <tr class="more-info__taste">
+                <td class="more-info__taste-title">Вкус</td>
+                <td class="more-info__taste-data">Курица</td>
+              </tr>
+              <tr class="more-info__price">
+                <td class="more-info__price-title">Цена</td>
+                <td class="more-info__price-data">700 р.</td>
+              </tr>
+            </table>
           </div>
           <a class="item__button" href="buy-page.html">Заказать</a>
         </article>
@@ -86,20 +80,20 @@
           </a>
           <div class="item__info">
             <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy PRO 1000 г</a></h3>
-            <div class="item__more-info more-info">
-              <section class="more-info__weight">
-                <h4 class="more-info__weight-title">Масса</h4>
-                <p class="more-info__weight-data">1000 г</p>
-              </section>
-              <section class="more-info__taste">
-                <h4 class="more-info__taste-title">Вкус</h4>
-                <p class="more-info__taste-data">Курица</p>
-              </section>
-              <section class="more-info__price">
-                <h4 class="more-info__price-title">Цена</h4>
-                <p class="more-info__price-data">1000 р.</p>
-              </section>
-            </div>
+            <table class="item__more-info more-info">
+              <tr class="more-info__weight">
+                <td class="more-info__weight-title">Масса</td>
+                <td class="more-info__weight-data">1000 г</td>
+              </tr>
+              <tr class="more-info__taste">
+                <td class="more-info__taste-title">Вкус</td>
+                <td class="more-info__taste-data">Курица</td>
+              </tr>
+              <tr class="more-info__price">
+                <td class="more-info__price-title">Цена</td>
+                <td class="more-info__price-data">1000 р.</td>
+              </tr>
+            </table>
           </div>
           <a class="item__button" href="buy-page.html">Заказать</a>
         </article>
@@ -111,20 +105,20 @@
           </a>
           <div class="item__info">
             <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy PRO 500 г</a></h3>
-            <div class="item__more-info more-info">
-              <section class="more-info__weight">
-                <h4 class="more-info__weight-title">Масса</h4>
-                <p class="more-info__weight-data">500 г</p>
-              </section>
-              <section class="more-info__taste">
-                <h4 class="more-info__taste-title">Вкус</h4>
-                <p class="more-info__taste-data">Рыба</p>
-              </section>
-              <section class="more-info__price">
-                <h4 class="more-info__price-title">Цена</h4>
-                <p class="more-info__price-data">700 р.</p>
-              </section>
-            </div>
+            <table class="item__more-info more-info">
+              <tr class="more-info__weight">
+                <td class="more-info__weight-title">Масса</td>
+                <td class="more-info__weight-data">500 г</td>
+              </tr>
+              <tr class="more-info__taste">
+                <td class="more-info__taste-title">Вкус</td>
+                <td class="more-info__taste-data">Рыба</td>
+              </tr>
+              <tr class="more-info__price">
+                <td class="more-info__price-title">Цена</td>
+                <td class="more-info__price-data">700 р.</td>
+              </tr>
+            </table>
           </div>
           <a class="item__button" href="buy-page.html">Заказать</a>
         </article>
@@ -136,20 +130,20 @@
           </a>
           <div class="item__info">
             <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy PRO 1000 г</a></h3>
-            <div class="item__more-info more-info">
-              <section class="more-info__weight">
-                <h4 class="more-info__weight-title">Масса</h4>
-                <p class="more-info__weight-data">1000 г</p>
-              </section>
-              <section class="more-info__taste">
-                <h4 class="more-info__taste-title">Вкус</h4>
-                <p class="more-info__taste-data">Рыба</p>
-              </section>
-              <section class="more-info__price">
-                <h4 class="more-info__price-title">Цена</h4>
-                <p class="more-info__price-data">1000 р.</p>
-              </section>
-            </div>
+            <table class="item__more-info more-info">
+              <tr class="more-info__weight">
+                <td class="more-info__weight-title">Масса</td>
+                <td class="more-info__weight-data">1000 г</td>
+              </tr>
+              <tr class="more-info__taste">
+                <td class="more-info__taste-title">Вкус</td>
+                <td class="more-info__taste-data">Рыба</td>
+              </tr>
+              <tr class="more-info__price">
+                <td class="more-info__price-title">Цена</td>
+                <td class="more-info__price-data">1000 р.</td>
+              </tr>
+            </table>
           </div>
           <a class="item__button" href="buy-page.html">Заказать</a>
         </article>
@@ -161,20 +155,20 @@
           </a>
           <div class="item__info">
             <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy Slim 500 г</a></h3>
-            <div class="item__more-info more-info">
-              <section class="more-info__weight">
-                <h4 class="more-info__weight-title">Масса</h4>
-                <p class="more-info__weight-data">500 г</p>
-              </section>
-              <section class="more-info__taste">
-                <h4 class="more-info__taste-title">Вкус</h4>
-                <p class="more-info__taste-data">Гречка</p>
-              </section>
-              <section class="more-info__price">
-                <h4 class="more-info__price-title">Цена</h4>
-                <p class="more-info__price-data">400 р.</p>
-              </section>
-            </div>
+            <table class="item__more-info more-info">
+              <tr class="more-info__weight">
+                <td class="more-info__weight-title">Масса</td>
+                <td class="more-info__weight-data">500 г</td>
+              </tr>
+              <tr class="more-info__taste">
+                <td class="more-info__taste-title">Вкус</td>
+                <td class="more-info__taste-data">Гречка</td>
+              </tr>
+              <tr class="more-info__price">
+                <td class="more-info__price-title">Цена</td>
+                <td class="more-info__price-data">400 р.</td>
+              </tr>
+            </table>
           </div>
           <a class="item__button" href="buy-page.html">Заказать</a>
         </article>
@@ -186,20 +180,20 @@
           </a>
           <div class="item__info">
             <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy Slim 1000 г</a></h3>
-            <div class="item__more-info more-info">
-              <section class="more-info__weight">
-                <h4 class="more-info__weight-title">Масса</h4>
-                <p class="more-info__weight-data">1000 г</p>
-              </section>
-              <section class="more-info__taste">
-                <h4 class="more-info__taste-title">Вкус</h4>
-                <p class="more-info__taste-data">Гречка</p>
-              </section>
-              <section class="more-info__price">
-                <h4 class="more-info__price-title">Цена</h4>
-                <p class="more-info__price-data">700 р.</p>
-              </section>
-            </div>
+            <table class="item__more-info more-info">
+              <tr class="more-info__weight">
+                <td class="more-info__weight-title">Масса</td>
+                <td class="more-info__weight-data">1000 г</td>
+              </tr>
+              <tr class="more-info__taste">
+                <td class="more-info__taste-title">Вкус</td>
+                <td class="more-info__taste-data">Гречка</td>
+              </tr>
+              <tr class="more-info__price">
+                <td class="more-info__price-title">Цена</td>
+                <td class="more-info__price-data">700 р.</td>
+              </tr>
+            </table>
           </div>
           <a class="item__button" href="buy-page.html">Заказать</a>
         </article>
@@ -211,20 +205,20 @@
           </a>
           <div class="item__info">
             <h3 class="item__title"><a class="item__name" href="info-item.html">Cat Energy Slim 500 г</a></h3>
-            <div class="item__more-info more-info">
-              <section class="more-info__weight">
-                <h4 class="more-info__weight-title">Масса</h4>
-                <p class="more-info__weight-data">500 г</p>
-              </section>
-              <section class="more-info__taste">
-                <h4 class="more-info__taste-title">Вкус</h4>
-                <p class="more-info__taste-data">Рис</p>
-              </section>
-              <section class="more-info__price">
-                <h4 class="more-info__price-title">Цена</h4>
-                <p class="more-info__price-data">500 р.</p>
-              </section>
-            </div>
+            <table class="item__more-info more-info">
+              <tr class="more-info__weight">
+                <td class="more-info__weight-title">Масса</td>
+                <td class="more-info__weight-data">500 г</td>
+              </tr>
+              <tr class="more-info__taste">
+                <td class="more-info__taste-title">Вкус</td>
+                <td class="more-info__taste-data">Рис</td>
+              </tr>
+              <tr class="more-info__price">
+                <td class="more-info__price-title">Цена</td>
+                <td class="more-info__price-data">500 р.</td>
+              </tr>
+            </table>
           </div>
           <a class="item__button" href="buy-page.html">Заказать</a>
         </article>
@@ -246,37 +240,45 @@
 
           <article class="catalog-plus__item plus-item">
             <h3 class="plus-item__title"><a class="plus-item__name" href="info-item.html">Сахарозаменитель</a></h3>
-            <section class="plus-item__info">
-              <h4 class="plus-item__info-description">1 упаковка (100 г)</h4>
-              <p class="plus-item__info-price">200 р.</p>
-            </section>
+            <table class="plus-item__info">
+              <tr class="plus-item__info-row">
+                <td class="plus-item__info-description">1 упаковка (100 г)</td>
+                <td class="plus-item__info-price">200 р.</td>
+              </tr>
+            </table>
             <a class="item__button" href="buy-page.html">Заказать</a>
           </article>
 
           <article class="catalog-plus__item plus-item">
             <h3 class="plus-item__title"><a class="plus-item__name" href="info-item.html">Питьевая вода</a></h3>
-            <section class="plus-item__info">
-              <h4 class="plus-item__info-description">5 литров</h4>
-              <p class="plus-item__info-price">50 р.</p>
-            </section>
+            <table class="plus-item__info">
+              <tr class="plus-item__info-row">
+                <td class="plus-item__info-description">5 литров</td>
+                <td class="plus-item__info-price">50 р.</td>
+              </tr>
+            </table>
             <a class="item__button" href="buy-page.html">Заказать</a>
           </article>
 
           <article class="catalog-plus__item plus-item">
             <h3 class="plus-item__title"><a class="plus-item__name" href="info-item.html">Молоко</a></h3>
-            <section class="plus-item__info">
-              <h4 class="plus-item__info-description">1 литр</h4>
-              <p class="plus-item__info-price">100 р.</p>
-            </section>
+            <table class="plus-item__info">
+              <tr class="plus-item__info-row">
+                <td class="plus-item__info-description">1 литр</td>
+                <td class="plus-item__info-price">100 р.</td>
+              </tr>
+            </table>
             <a class="item__button" href="buy-page.html">Заказать</a>
           </article>
 
           <article class="catalog-plus__item plus-item">
             <h3 class="plus-item__title"><a class="plus-item__name" href="info-item.html">Витамины</a></h3>
-            <section class="plus-item__info">
-              <h4 class="plus-item__info-description">1 упаковка (30 г)</h4>
-              <p class="plus-item__info-price">300 р.</p>
-            </section>
+            <table class="plus-item__info">
+              <tr class="plus-item__info-row">
+                <td class="plus-item__info-description">1 упаковка (30 г)</td>
+                <td class="plus-item__info-price">300 р.</td>
+              </tr>
+            </table>
             <a class="item__button" href="buy-page.html">Заказать</a>
           </article>
         </div>
