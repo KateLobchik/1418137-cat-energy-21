@@ -13,16 +13,12 @@
     <div class="page-header__logo">
       <a class="page-header__logo-cat">
         <img src="https://via.placeholder.com/33x38" alt="Иконка энергичного кота">
-      </a>
-      <a class="page-header__logo-text">
         <img src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
       </a>
     </div>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <div class="main-nav__container">
         <ul class="main-nav__list">
           <li class="main-nav__list-item main-nav__list-item--active">
@@ -126,56 +122,56 @@
           <div class="example__item-price">
             <p class="example__description-price">Затраты на питание: 15 000 РУБ.</p>
           </div>
-          </dl>
+        </div>
 
-          <div class="example__slider">
-            <!--Слайдер-->
+        <div class="example__slider">
+          <!--Слайдер-->
 
-            <ol class="example__slides">
-              <!--Слайды-->
-              <li class="example__slide example__slide-past">
-                <img src="https://via.placeholder.com/311x232" alt="Фотография Бориса до употребления Кэт энерджи">
-              </li>
-              <li class="example__slide example__slide-present" alt="Фотография Бориса после употребления Кэт энерджи">
-                <img src="https://via.placeholder.com/251x240">
-              </li>
-            </ol>
+          <ol class="example__slides">
+            <!--Слайды-->
+            <li class="example__slide example__slide-past">
+              <img src="https://via.placeholder.com/311x232" alt="Фотография Бориса до употребления Кэт энерджи">
+            </li>
+            <li class="example__slide example__slide-present">
+              <img src="https://via.placeholder.com/251x240" alt="Фотография Бориса после употребления Кэт энерджи">
+            </li>
+          </ol>
 
-            <div class="example__slider-controls">
-              <!--Строка(кнопки) управления-->
-              <button class="example__slide-past" type="button">Было
-              </button>
-              <div class="example__range slider-range">
-                <button class="slider-range__toggle" type="button"></button>
-                <div class="slider-range__scale">
-                  <div class="slider-range__bar"></div>
-                </div>
+          <div class="example__slider-controls">
+            <!--Строка(кнопки) управления-->
+            <button class="example__slide-past" type="button">Было
+            </button>
+            <div class="example__range slider-range">
+              <button class="slider-range__toggle" type="button"></button>
+              <div class="slider-range__scale">
+                <div class="slider-range__bar"></div>
               </div>
-              <button class="example__slide-present" type="button">Стало
-              </button>
-              <!--Признаюсь честно: что-то похожее делали на прошлом курсе..попробовала переделать под этот макет-->
             </div>
-
+            <button class="example__slide-present" type="button">Стало
+            </button>
           </div>
 
         </div>
-    </section>
 
-    <section class="contacts">
-      <div class="contacts-container">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts-slogan">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-        <a class="contacts-map" href="#">
-          <img src="https://via.placeholder.com/320x362"
-            alt="Карта офиса по адресу Большая Конюшенная улица, 19/8 в Санкт-Петербурге">
-        </a>
       </div>
     </section>
 
   </main>
 
   <footer class="page-footer">
+
+    <section class="page-footer__contacts contacts">
+      <div class="contacts__container">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts-slogan">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+      <a class="contacts-map" href="#">
+        <img src="https://via.placeholder.com/320x362"
+          alt="Карта офиса по адресу Большая Конюшенная улица, 19/8 в Санкт-Петербурге">
+      </a>
+    </section>
+
     <div class="page-footer__container">
       <div class="page-footer__logo footer-logo">
         <a class="footer-logo__link">
