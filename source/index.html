@@ -4,31 +4,33 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
 
   <header class="page-header">
 
-    <div class="page-header__logo">
-      <a class="page-header__logo-cat">
+    <div class="page-header__container">
+      <a class="page-header__logo">
         <img src="https://via.placeholder.com/33x38" alt="Иконка энергичного кота">
-        <img src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
+        <img class="page-header__logo-text" src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
       </a>
+      <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
     </div>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <!--Будет реализовано как попап?-->
       <div class="main-nav__container">
         <ul class="main-nav__list">
-          <li class="main-nav__list-item main-nav__list-item--active">
-            <a>Главная</a>
+          <li>
+            <a class="main-nav__list-item main-nav__list-item--active">Главная</a>
           </li>
-          <li class="main-nav__list-item main-nav__list-item--active">
-            <a href="catalog.html">Каталог продукции</a>
+          <li>
+            <a class="main-nav__list-item main-nav__list-item--active" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-nav__list-item main-nav__list-item--active">
-            <a href="form.html">Подбор программы</a>
+          <li>
+            <a class="main-nav__list-item main-nav__list-item--active" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -139,15 +141,15 @@
 
           <div class="example__slider-controls">
             <!--Строка(кнопки) управления-->
-            <button class="example__slide-past" type="button">Было
+            <button class="example__past" type="button">Было
             </button>
-            <div class="example__range slider-range">
-              <button class="slider-range__toggle" type="button"></button>
-              <div class="slider-range__scale">
-                <div class="slider-range__bar"></div>
+            <div class="example__range">
+              <button class="example__range-toggle" type="button"></button>
+              <div class="example__range-scale">
+                <div class="example__range-bar"></div>
               </div>
             </div>
-            <button class="example__slide-present" type="button">Стало
+            <button class="example__present" type="button">Стало
             </button>
           </div>
 
@@ -173,8 +175,8 @@
     </section>
 
     <div class="page-footer__container">
-      <div class="page-footer__logo footer-logo">
-        <a class="footer-logo__link">
+      <div class="page-footer__logo">
+        <a class="page-footer__logo-link">
           <img src="https://via.placeholder.com/128x24" alt="Кэт энерджи">
         </a>
       </div>
@@ -199,8 +201,8 @@
         </ul>
       </div>
 
-      <div class="page-footer__developer developer">
-        <a class="developer-name" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="page-footer__developer">
+        <a class="page-footer__developer-name" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <svg aria-label="HTML Academy"></svg>
       </div>
     </div>
