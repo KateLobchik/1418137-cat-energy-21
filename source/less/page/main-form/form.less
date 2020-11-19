@@ -1,0 +1,41 @@
+.form__container-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 32px;
+}
+
+.form__main-point {
+  margin: 0;
+  font-family: @font-description;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 9px 0;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  text-transform: uppercase;
+  background-color: @green;
+  border: none;
+}
+
+.form__button:hover,
+.form__button:focus {
+  background-color: @dark-green;
+  cursor: pointer;
+}
+
+.form__button:active {
+  color: @white-30;
+  background-color: @dark-green;
+  cursor: pointer;
+}
