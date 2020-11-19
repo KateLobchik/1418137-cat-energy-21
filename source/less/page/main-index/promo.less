@@ -1,5 +1,54 @@
 .promo {
-  outline-offset: -2px;
-  outline: 2px solid @green-85;
   background-color: rgb(194, 235, 168);/*Просто подсветить блок*/
+}
+
+.promo__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 0 20px;
+  color: @white;
+  text-align: center;
+}
+
+.promo__title {
+  margin: 0;
+  padding: 27px 0 25px;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.promo__slogan {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.promo__button {
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: @green;
+  order: 1;
+}
+
+.promo__button:hover,
+.promo__button:focus {
+  background-color: @dark-green;
+  cursor: pointer;
+}
+
+.promo__button:active {
+  color: @white-30;
+  background-color: @dark-green;
+  cursor: pointer;
 }
