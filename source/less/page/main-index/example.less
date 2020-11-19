@@ -1,0 +1,152 @@
+.example {
+  background-color: @background-section-example;
+}
+
+.example__container {
+  padding: 27px 20px 25px;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 33px;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: @font-description;
+  font-size: 14px;
+  line-height: 18px;
+  color: @base-dark-grey;
+}
+
+.example__statistics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.example__item {
+  position: relative;
+}
+
+.example__number {
+  min-width: 124px;
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 15px 21px 17px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  box-sizing: border-box;
+  border: 1px solid @border-example-statistics;
+  border-radius: 3px;
+}
+
+.example__statistics-description {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  width: 87px;
+  padding: 0 14px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: @background-section-example;
+  box-sizing: border-box;
+}
+
+.example__item-price {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__slides {
+  width: 100%;
+  min-height: 232px;
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+  list-style: none;
+  outline-offset: -1px;
+  outline: 1px solid purple;
+}
+
+.example__slide {
+  display: none;
+  height: 100%;
+  background-color: rgb(200, 237, 241);
+}
+
+.example__slide--active {
+  display: block;
+}
+/*В браузере виден слайд с толстым котом, но оно большое и в слайд не влезает. Но я думаю, это впереди будет рассматриваться..*/
+
+.example__slider-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: 0 25px 0 27px;
+}
+
+.example__range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2px;
+  position: relative;
+}
+
+.example__range-toggle {
+  position: absolute;
+  left: 32px;
+  width: 20px;
+  height: 20px;
+  border: 1px dashed @dark-grey;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*Просто для понимания :D*/
+
+.example__range-scale {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 14px;
+  padding: 0 5px;
+  background-color: @white;
+  border: 1px solid @grey;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.example__range-bar {
+  width: 35px;
+  height: 6px;
+  background-color: @green;
+  border-radius: 6px;
+}
+
+.example__slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
