@@ -1,0 +1,59 @@
+.feedback-contacts {
+  padding: 0;
+  border: none;
+  border-top: 2px solid @green;
+}
+
+.feedback-contacts__title {
+  width: 187px; /*Не могу никак додуматься как уменьшить ширину блока по его содержимому.. чтобы ширина была адаптивной*/
+  margin: 0;
+  padding: 0 15px 0 20px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.feedback-contacts__container {
+  padding: 32px 20px 27px 20px;
+}
+
+.feedback-contacts__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin: 0;
+  margin-bottom: 14px;
+  padding: 0;
+
+  color: @base-dark-grey;
+}
+
+.feedback-contacts__item:last-child {
+  margin: 0;
+}
+
+.feedback-contacts__item-title {
+  padding-right: 9px;
+  align-self: center;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.feedback-contacts__title-email {
+  padding-right: 12px;
+}
+
+.feedback-contacts__field {
+  width: 100%;
+  height: 45px;
+  padding-right: 43px;
+  padding-left: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid @border-field;
+  box-sizing: border-box;
+}
