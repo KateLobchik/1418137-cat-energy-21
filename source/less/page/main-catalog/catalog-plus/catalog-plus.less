@@ -1,0 +1,61 @@
+.catalog-plus::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: @green;
+  z-index: -1;
+}
+
+.catalog-plus {
+  position: relative;
+}
+
+.catalog-plus__title-container {
+  padding: 28px 0 35px;
+}
+
+.catalog-plus__title {
+  display: inline-block;
+  margin: 0;
+  padding: 0 22px 0 20px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  background-color: @white;
+}
+
+.catalog-plus__container {
+  padding: 0 20px;
+}
+
+.catalog-plus__present {
+  position: relative;
+  margin: 39px 0 35px;
+  padding: 186px 61px 43px 58px;
+  background-color: @green;
+}
+
+.catalog-plus__present::after {
+  content: "";
+  position: absolute;
+  top: 58px;
+  left: 101px;
+  width: 78px;
+  height: 80px;
+  background-image: url("../img/icons/icon_gift.svg");
+  background-size: 78px 80px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.catalog-plus__present-slogan {
+  margin: 0;
+  font-family: @font-description;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: @white;
+}
