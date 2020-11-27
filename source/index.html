@@ -4,38 +4,39 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
 
   <header class="page-header">
-
     <div class="page-header__container">
-      <a class="page-header__logo">
-        <img src="https://via.placeholder.com/33x38" alt="Иконка энергичного кота">
-        <img class="page-header__logo-text" src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
-      </a>
-      <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
-    </div>
-
-    <nav class="main-nav">
-      <!--Будет реализовано как попап?-->
-      <div class="main-nav__container">
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item">
-            <a class="main-nav__link main-nav__list-item--active">Главная</a>
-          </li>
-          <li class="main-nav__list-item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__list-item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+      <div class="page-header__container-logo">
+        <a class="page-header__logo">
+          <img src="https://via.placeholder.com/33x38" alt="Иконка энергичного кота">
+          <img class="page-header__logo-text" src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
+        </a>
+        <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
       </div>
-    </nav>
 
+      <nav class="main-nav">
+        <!--Будет реализовано как попап?-->
+        <div class="main-nav__container">
+          <ul class="main-nav__list">
+            <li class="main-nav__list-item">
+              <a class="main-nav__link main-nav__list-item--active">Главная</a>
+            </li>
+            <li class="main-nav__list-item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__list-item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main">
@@ -43,11 +44,13 @@
     <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков</h1>
 
     <section class="promo">
+      <div class="promo__background"></div>
       <div class="promo__container">
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <a class="promo__button green-button">Подобрать программу</a>
-        <img src="https://via.placeholder.com/280x270" alt="Упаковка еды Кэт энерджи со вкусом курицы">
+        <a class="promo__button">Подобрать программу</a>
+        <img class="promo__item-image" src="https://via.placeholder.com/280x270"
+          alt="Упаковка еды Кэт энерджи со вкусом курицы">
       </div>
     </section>
 
@@ -98,31 +101,35 @@
 
     <section class="example">
       <div class="example__container">
-        <h2 class="example__title section-title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-          16 часов в день.
-        </p>
+        <div class="example__container-info">
+          <h2 class="example__title section-title">Живой пример</h2>
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+            по
+            16 часов в день.
+          </p>
 
-        <div class="example__statistics">
-          <section class="example__item">
-            <h3 class="example__number">
-              5 кг
-            </h3>
-            <p class="example__description example__statistics-description">
-              снижение веса
-            </p>
-          </section>
-          <section class="example__item">
-            <h3 class="example__number">
-              60 дней
-            </h3>
-            <p class="example__description example__statistics-description">
-              затрачено времени
-            </p>
-          </section>
-          <div class="example__item-price">
-            <p class="example__description-price">Затраты на питание: 15 000 РУБ.</p>
+          <div class="example__statistics">
+            <section class="example__item">
+              <h3 class="example__number">
+                5 кг
+              </h3>
+              <p class="example__description example__statistics-description">
+                снижение веса
+              </p>
+            </section>
+            <section class="example__item">
+              <h3 class="example__number">
+                60 дней
+              </h3>
+              <p class="example__description example__statistics-description">
+                затрачено времени
+              </p>
+            </section>
+            <div class="example__item-price">
+              <p class="example__description-price">Затраты на питание: <span class="example__price">15 000 РУБ.</span>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -163,10 +170,13 @@
   <footer class="page-footer">
 
     <section class="page-footer__contacts contacts">
-      <div class="contacts__container contacts__container--light">
-        <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts-slogan">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <div class="contacts__container">
+        <div class="contacts__info contacts__info-index">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="contacts-slogan">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span
+              class="contacts__city">Санкт-Петербург</span></address>
+        </div>
       </div>
       <a class="contacts-map" href="#">
         <img src="https://via.placeholder.com/320x362"

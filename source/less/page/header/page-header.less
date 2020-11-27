@@ -1,8 +1,31 @@
 .page-header__container {
+  @media (min-width: @width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: @width-desktop;
+    margin: 0 auto;
+    padding: 0 60px;
+    box-sizing: border-box;
+  }
+}
+
+.page-header__container-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 11px 20px 17px;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .page-header__logo {
@@ -13,4 +36,10 @@
 
 .page-header__logo-text {
   margin-left: 57px;
+}
+
+.page-header__nav-toggle {
+  @media (min-width: @width-tablet) {
+    display: none;
+  }
 }
