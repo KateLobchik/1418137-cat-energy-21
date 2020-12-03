@@ -57,21 +57,116 @@
 
 .how-work__item {
   margin-bottom: 20px;
+  position: relative;
 
   @media (min-width: @width-tablet) {
     margin-bottom: 0;
-    padding: 151px 79px 57px 0;
+    padding: 151px 0 57px;
   }
 
   @media (min-width: @width-desktop) {
     padding-right: 0;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: @green;
+
+    @media (min-width: @width-tablet) {
+      top: 40px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @media (min-width: @width-tablet) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 111px;
+      width: 134px;
+      height: 280px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 134px 280px;
+      z-index: -1;
+    }
+  }
 }
 
 .how-work__description {
+  min-height: 60px;
   margin: 0;
+  padding: 2px 0 4px;
+}
+
+.how-work__description br {
+  display: none;
+
+  @media (min-width: @width-tablet) {
+    display: inline;
+  }
 }
 
 .how-work__item:last-child .how-work__description {
   margin-bottom: 0;
+}
+
+.how-work__item--native {
+  &::before {
+    background-image: url("../img/icons/how-work/icon-leaf.svg");
+    background-size: 30px 32px;
+  }
+
+  &::after {
+    left: 118px;
+    width: 112px;
+    background-image: url("../../../img/icons/how-work/1.svg");
+    background-size: 112px 280px;
+  }
+}
+
+.how-work__item--cook {
+  &::before {
+    background-image: url("../img/icons/how-work/icon-cook.svg");
+    background-size: 29px 31px;
+  }
+
+  &::after {
+    background-image: url("../../../img/icons/how-work/2.svg");
+  }
+}
+
+.how-work__item--meal {
+  &::before {
+    background-image: url("../img/icons/how-work/icon-eat.svg");
+    background-size: 25px 30px;
+  }
+
+  &::after {
+    background-image: url("../../../img/icons/how-work/3.svg");
+  }
+}
+
+.how-work__item--result {
+  &::before {
+    background-image: url("../img/icons/how-work/icon-alarm.svg");
+    background-size: 32px 33px;
+  }
+
+  &::after {
+    left: 113px;
+    width: 136px;
+    background-image: url("../../../img/icons/how-work/4.svg");
+    background-size: 136px 280px;
+  }
 }

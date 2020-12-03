@@ -8,7 +8,16 @@
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 2;
-  background-color: @green;
+  background-image: url("../../../img/index-background-desktop.jpg");
+  background-position: -30px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo__background-color {
+  width: 100%;
+  height: 100%;
+  background-color: @green-85;
 }
 
 .promo__container {
@@ -70,6 +79,16 @@
   }
 }
 
+.promo__container-image {
+  width: 280px;
+  height: 270px;
+}
+
+.promo__image {
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: @width-tablet) {
   .promo__background {
     display: none;
@@ -115,14 +134,14 @@
     order: 0;
   }
 
-  .promo__item-image {
+  .promo__container-image {
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-    z-index: -1;
     width: 709px;
     height: 609px;
+    z-index: -1;
   }
 }
 
@@ -178,7 +197,7 @@
     order: 0;
   }
 
-  .promo__item-image {
+  .promo__container-image {
     grid-row-start: 1;
     grid-row-end: 5;
     grid-column-start: 2;

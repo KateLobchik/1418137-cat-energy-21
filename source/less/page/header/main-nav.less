@@ -1,3 +1,17 @@
+.main-nav {
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  &--nojs {
+    display: block;
+  }
+}
+
 .main-nav__list {
   margin: 0;
   padding: 0;
@@ -75,7 +89,6 @@
 
   @media (min-width: @width-desktop) {
     color: @white;
-    background-color: @green;
   }
 }
 

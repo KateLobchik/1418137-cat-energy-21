@@ -1,6 +1,8 @@
 .contacts {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -76,16 +78,19 @@
 }
 
 .contacts__city {
+  display: none;
+
   @media (min-width: @width-tablet) {
     display: inline-block;
-    margin-top: 19px;
   }
 }
 
 .contacts-map {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   line-height: 0;
-  background-color: green;
 
   @media (min-width: @width-tablet) {
     min-height: 400px;
