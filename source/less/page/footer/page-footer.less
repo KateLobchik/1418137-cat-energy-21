@@ -17,6 +17,10 @@
     padding: 0 30px;
   }
 
+  @media (min-width: @width-tablet) {
+    padding: 0 60px;
+  }
+
   @media (min-width: @width-desktop) {
     max-width: @width-desktop;
     margin: 0 auto;
@@ -64,6 +68,12 @@
   width: 100%;
   padding: 20px 0;
   color: @footer-icon;
+
+  @media (min-width: 500px) {
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+  }
 
   @media (min-width: @width-tablet) {
     width: 163px;

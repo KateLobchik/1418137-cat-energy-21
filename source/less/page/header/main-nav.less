@@ -1,6 +1,10 @@
 .main-nav {
   &--closed {
     display: none;
+
+    @media (min-width: @width-tablet) {
+      display: block;
+    }
   }
 
   &--opened {

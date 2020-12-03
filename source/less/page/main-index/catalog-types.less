@@ -1,8 +1,12 @@
 .catalog-types__container {
   padding: 0 20px;
 
-  @media (min-width: @width-tablet) {
+  @media (min-width: 500px) {
     padding: 0 30px;
+  }
+
+  @media (min-width: 980px) {
+    padding: 0 60px;
   }
 
   @media (min-width: @width-desktop) {
@@ -86,7 +90,7 @@
   left: 13px;
   width: 67px;
   height: 50px;
-  background-image: url("../../../img/icons/type-cataloge/cat-weight.svg");
+  background-image: url("../img/icons/type-cataloge/cat-weight.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 67px 50px;
@@ -197,7 +201,7 @@
     right: 0;
     width: 32px;
     height: 10px;
-    background-image: url("../../../img/icons/shape.svg");
+    background-image: url("../img/icons/shape.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 32px 10px;
@@ -209,6 +213,6 @@
 
   &:hover::after,
   &:focus::after {
-    background-image: url("../../../img/icons/shape-hover.svg");
+    background-image: url("../img/icons/shape-hover.svg");
   }
 }

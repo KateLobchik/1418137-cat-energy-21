@@ -24,8 +24,16 @@
   align-items: center;
   padding: 28px 20px 22px;
 
+  @media (min-width: 500px) {
+    padding: 28px 45px 22px;
+  }
+
   @media (min-width: @width-tablet) {
     padding: 66px 71px 51px;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 66px 100px 51px;
   }
 
   @media (min-width: @width-desktop) {
@@ -37,8 +45,7 @@
   background-color: @white;
 }
 
-.contacts-slogan {
-  width: 140px;
+.contacts__slogan {
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -47,13 +54,18 @@
   text-align: left;
 
   @media (min-width: @width-tablet) {
-    width: 171px;
     font-size: 20px;
     line-height: 21px;
   }
+}
+
+.contacts__slogan-br {
+  @media (min-width: 1000px) {
+    display: none;
+  }
 
   @media (min-width: @width-desktop) {
-    width: 163px;
+    display: inline;
   }
 }
 
