@@ -1,8 +1,29 @@
 .promo {
-  background-color: rgb(194, 235, 168);/*Просто подсветить блок*/
+  display: grid;
+  grid-template-rows: 302px 1fr;
+}
+
+.promo__background {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-image: url("../img/index-background-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo__background-color {
+  width: 100%;
+  height: 100%;
+  background-color: @green-85;
 }
 
 .promo__container {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,7 +31,11 @@
   margin-bottom: 22px;
   padding: 0 20px;
   color: @white;
-  text-align: center;
+  z-index: 1;
+
+  @media (min-width: 500px) {
+    padding: 0 30px;
+  }
 }
 
 .promo__title {
@@ -19,6 +44,7 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
+  text-align: center;
 }
 
 .promo__slogan {
@@ -37,18 +63,150 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
+  color: @white;
   background-color: @green;
   order: 1;
+
+  &:hover,
+  &:focus {
+    background-color: @dark-green;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: @white-30;
+    background-color: @dark-green;
+    cursor: pointer;
+  }
 }
 
-.promo__button:hover,
-.promo__button:focus {
-  background-color: @dark-green;
-  cursor: pointer;
+.promo__container-image {
+  width: 280px;
+  height: 270px;
 }
 
-.promo__button:active {
-  color: @white-30;
-  background-color: @dark-green;
-  cursor: pointer;
+.promo__image {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: @width-tablet) {
+  .promo__background {
+    display: none;
+  }
+
+  .promo__container {
+    display: grid;
+    grid-row: auto auto auto 1fr;
+    margin: 0 auto;
+    padding: 0 30px;
+    color: @black;
+  }
+
+  .promo__title {
+    max-width: 450px;
+    padding: 40px 0 41px 87px;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .promo__slogan {
+    margin: 0;
+    padding: 0 0 20px 87px;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .promo__button {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: block;
+    width: fit-content;
+    margin: 29px 0 0 87px;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+    box-sizing: border-box;
+    order: 0;
+  }
+
+  .promo__container-image {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 709px;
+    height: 609px;
+    z-index: -1;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .promo__background {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    height: 694px;
+    z-index: -2;
+  }
+
+  .promo__container {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: @width-desktop;
+    margin: 0 auto;
+    margin-bottom: 82px;
+    padding: 0 60px;
+    box-sizing: border-box;
+  }
+
+  .promo__title {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 82px 0 40px 80px;
+  }
+
+  .promo__slogan {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0 0 52px 80px;
+  }
+
+  .promo__button {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: block;
+    width: fit-content;
+    margin: 0;
+    margin-left: 80px;
+    padding: 14px 26px;
+    box-sizing: border-box;
+    order: 0;
+  }
+
+  .promo__container-image {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 552px;
+    height: 499px;
+    padding: 0 0 54px 43px;
+    z-index: -1;
+  }
 }

@@ -1,32 +1,124 @@
 .example {
+  position: relative;
+}
+
+.example::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: @background-section-example;
+  z-index: -1;
+
+  @media (min-width: @width-tablet) {
+    top: 619px;
+  }
+
+  @media (min-width: @width-desktop) {
+    top: 194px;
+  }
 }
 
 .example__container {
-  padding: 27px 20px 25px;
+  @media (min-width: @width-tablet) {
+    padding: 43px 30px 0;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 43px 60px 0;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    max-width: @width-desktop;
+    margin: 0 auto;
+    padding: 0 20px 0 60px;
+    box-sizing: border-box;
+  }
+}
+
+.example__container-info {
+  padding: 27px 20px 0;
+
+  @media (min-width: 500px) {
+    padding: 27px 30px 0;
+  }
+
+  @media (min-width: @width-tablet) {
+    padding: 0;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 58px 134px 75px 0;
+  }
 }
 
 .example__title {
   margin: 0;
-  margin-bottom: 33px;
+  padding-bottom: 33px;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @width-tablet) {
+    padding-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-bottom: 146px;
+  }
 }
 
 .example__description {
   margin: 0;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
   font-family: @font-description;
   font-size: 14px;
   line-height: 18px;
   color: @base-dark-grey;
+
+  @media (min-width: @width-tablet) {
+    padding: 0 15px 54px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 0;
+    padding-bottom: 69px;
+  }
 }
 
 .example__statistics {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 31px;
+
+  @media (min-width: 560px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 42px;
+    padding-bottom: 59px;
+  }
+
+  @media (min-width: @width-tablet) {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+  }
 }
 
 .example__item {
@@ -44,55 +136,196 @@
   box-sizing: border-box;
   border: 1px solid @border-example-statistics;
   border-radius: 3px;
+
+  @media (min-width: 560px) {
+    margin: 0;
+  }
+
+  @media (min-width: @width-tablet) {
+    padding-bottom: 20px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.example__description-container {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: 480px) {
+    top: 50px;
+  }
+
+  @media (min-width: @width-tablet) {
+    top: 66px;
+  }
+
+  @media (min-width: @width-desktop) {
+    top: 60px;
+  }
 }
 
 .example__statistics-description {
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  width: 87px;
   padding: 0 14px;
   text-align: center;
   font-size: 12px;
   line-height: 12px;
+  text-transform: lowercase;
   background-color: @background-section-example;
   box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    left: 0;
+    right: 0;
+    width: fit-content;
+    padding: 0 7px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: @white;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @width-desktop) {
+    background-color: @background-section-example;
+  }
+}
+
+.example__next-line {
+  @media (min-width: 480px) {
+    display: none;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: inline;
+  }
 }
 
 .example__item-price {
+  grid-column-start: 1;
+  grid-column-end: 3;
   width: 100%;
+  padding-bottom: 42px;
   text-align: center;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: 560px) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+  }
+
+  @media (min-width: @width-tablet) {
+    justify-content: flex-end;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: 1000px) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media (min-width: @width-desktop) {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+.example__description-price {
+  margin: 0;
+}
+
+.example__price {
+  @media (min-width: 560px) {
+    display: block;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: inline-block;
+    margin-left: 63px;
+  }
+}
+
+.example__slider {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: @width-tablet) {
+    width: 708px;
+    height: 620px;
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 690px;
+    height: 656px;
+    margin: 0;
+  }
 }
 
 .example__slides {
   width: 100%;
   min-height: 232px;
   margin: 0;
-  margin-bottom: 23px;
   padding: 0;
+  text-align: center;
   list-style: none;
-  outline-offset: -1px;
-  outline: 1px solid purple;
+
+  @media (min-width: @width-tablet) {
+    min-height: 620px;
+  }
+
+  @media (min-width: @width-desktop) {
+    min-height: 659px;
+    min-width: 650px;
+  }
 }
 
 .example__slide {
   display: none;
   height: 100%;
-  background-color: rgb(200, 237, 241);
 }
 
 .example__slide--active {
   display: block;
 }
-/*В браузере виден слайд с толстым котом, но оно большое и в слайд не влезает. Но я думаю, это впереди будет рассматриваться..*/
 
 .example__slider-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  padding: 0 25px 0 27px;
+  width: 100%;
+  padding: 0 45px 0 47px;
+  box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    bottom: 31px;
+    padding: 0 62px 0 56px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 0 53px 0 78px;
+  }
 }
 
 .example__range {
@@ -112,8 +345,17 @@
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
+
+  @media (min-width: @width-tablet) {
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background-color: @green;
+    border: 12px solid @white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  }
 }
-/*Просто для понимания :D*/
 
 .example__range-scale {
   display: flex;
@@ -126,6 +368,13 @@
   border: 1px solid @grey;
   border-radius: 6px;
   box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    height: 6px;
+    padding: 0;
+    background-color: @grey;
+    border: none;
+  }
 }
 
 .example__range-bar {
@@ -133,14 +382,17 @@
   height: 6px;
   background-color: @green;
   border-radius: 6px;
+
+  @media (min-width: @width-tablet) {
+    display: none;
+  }
 }
 
 .example__slider-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  padding: 0;
+  padding: 0 10px 2px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -149,4 +401,34 @@
   border: none;
   box-sizing: border-box;
   cursor: pointer;
+  position: relative;
+
+  @media (min-width: @width-tablet) {
+    padding: 0 0 1px;
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dashed @grey;
+
+    &::after {
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      bottom: -10%;
+      right: -10%;
+    }
+  }
+}
+
+.example__button-past {
+  @media (min-width: @width-tablet) {
+    margin-right: 24px;
+    margin-left: 11px;
+  }
+}
+
+.example__button-present {
+  @media (min-width: @width-tablet) {
+    margin-left: 20px;
+    margin-right: 7px;
+  }
 }

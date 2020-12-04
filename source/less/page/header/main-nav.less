@@ -1,39 +1,99 @@
 .main-nav {
-  font-family: @font-medium;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: @black;
+  &--closed {
+    display: none;
+
+    @media (min-width: @width-tablet) {
+      display: block;
+    }
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  &--nojs {
+    display: block;
+  }
 }
 
 .main-nav__list {
   margin: 0;
   padding: 0;
+  font-family: @font-medium;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
   list-style: none;
+
+  @media (min-width: @width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: @font-regular;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @width-desktop) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .main-nav__list-item {
   padding: 22px 0 24px;
   text-align: center;
   border-bottom: 1px solid @header-decor-line;
+
+  @media (min-width: @width-tablet) {
+    margin-left: 35px;
+    padding: 42px 0 30px;
+    border: none;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-left: 35px;
+    padding: 69px 0 42px;
+    border: none;
+  }
 }
 
 .main-nav__list-item:first-of-type {
   border-top: 1px solid @header-decor-line;
+
+  @media (min-width: @width-tablet) {
+    margin: 0;
+    border: none;
+  }
+}
+
+.main-nav__list-item:last-of-type {
+  @media (min-width: @width-tablet) {
+    margin-right: 29px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-right: 60px;
+  }
 }
 
 .main-nav__link {
   color: @black;
   text-decoration: none;
-}
 
-.main-nav__link:hover,
-.main-nav__link:focus {
-  opacity: 0.6;
-}
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-.main-nav__link:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @width-desktop) {
+    color: @white;
+  }
 }
 
 .main-nav__list-item--active {
@@ -48,4 +108,12 @@
   width: 100%;
   height: 1px;
   background-color: @green;
+
+  @media (min-width: @width-tablet) {
+    height: 2px;
+  }
+
+  @media (min-width: @width-desktop) {
+    background-color: @white;
+  }
 }

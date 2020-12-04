@@ -1,35 +1,118 @@
 .contacts {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .contacts__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 28px 20px 22px;
+  width: 100%;
+  max-width: @width-desktop;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (min-width: @width-desktop) {
+    padding: 95px 710px 104px 60px;
+    z-index: 1;
+  }
 }
 
-.contacts__container--light {
+.contacts__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 20px 22px;
+
+  @media (min-width: 500px) {
+    padding: 28px 45px 22px;
+  }
+
+  @media (min-width: @width-tablet) {
+    padding: 66px 71px 51px;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 66px 100px 51px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 66px 89px 51px 76px;
+  }
+}
+
+.contacts__info-index {
   background-color: @white;
 }
 
-.contacts-slogan {
+.contacts__slogan {
   margin: 0;
   padding: 0;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: left;
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+
+.contacts__slogan-br {
+  @media (min-width: 1000px) {
+    display: none;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: inline;
+  }
 }
 
 .contacts__address {
+  width: 140px;
   font-family: @font-description;
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
   color: @base-dark-grey;
+
+  @media (min-width: @width-tablet) {
+    width: 159px;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 155px;
+    text-align: left;
+  }
+}
+
+.contacts__city {
+  display: none;
+
+  @media (min-width: @width-tablet) {
+    display: inline-block;
+  }
 }
 
 .contacts-map {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   line-height: 0;
+
+  @media (min-width: @width-tablet) {
+    min-height: 400px;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

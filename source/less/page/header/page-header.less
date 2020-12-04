@@ -1,16 +1,107 @@
 .page-header__container {
+  @media (min-width: @width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: @width-desktop;
+    margin: 0 auto;
+    padding: 0 60px;
+    box-sizing: border-box;
+  }
+}
+
+.page-header__container-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 11px 20px 17px;
+
+  @media (min-width: 500px) {
+    padding: 11px 30px 17px;
+  }
+
+  @media (min-width: @width-tablet) {
+    padding: 24px 0 20px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 50px 0 29px;
+  }
+}
+
+.page-header__logo-link {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 33px;
+    height: 38px;
+    background-image: url("../img/icons/header/mobile-logo-cat.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 33px 38px;
+
+    @media (min-width: @width-tablet) {
+      display: none;
+    }
+  }
 }
 
 .page-header__logo {
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  padding: 12px 0 8px 90px;
+
+  @media (min-width: @width-tablet) {
+    padding: 0;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 202px;
+    height: 59px;
+  }
 }
 
-.page-header__logo-text {
-  margin-left: 57px;
+.page-header__nav-toggle {
+  background-color: transparent;
+  border: none;
+
+  &--closed {
+    width: 24px;
+    height: 16px;
+    background-image: url("../img/icons/header/icon-menu.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 24px 16px;
+  }
+
+  &--active {
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icons/header/icon-menu-close.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  @media (min-width: @width-tablet) {
+    display: none;
+  }
 }
