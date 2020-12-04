@@ -1,10 +1,16 @@
 .social__list {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  width: auto;
   margin: 0;
   padding: 0;
+  padding-right: 3px;
   list-style: none;
+
+  @media (min-width: @width-tablet) {
+    padding-right: 14px;
+  }
 }
 
 .social__link {
@@ -20,8 +26,30 @@
   color: @green-30;
 }
 
+.social__link--vkontakte {
+  @media (min-width: @width-tablet) {
+    width: 31px;
+    height: 23px;
+    padding-top: 4px;
+  }
+}
+
 .social__link--instagram {
   margin: 0 33px 0 36px;
+
+  @media (min-width: @width-tablet) {
+    width: 23px;
+    height: 23px;
+    margin: 0 20px 0 26px;
+    padding-top: 6px;
+  }
+}
+
+.social__link--facebook {
+  @media (min-width: @width-tablet) {
+    width: 31px;
+    height: 36px;
+  }
 }
 
 .social__link--facebook path {
