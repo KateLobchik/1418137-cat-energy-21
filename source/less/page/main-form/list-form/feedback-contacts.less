@@ -139,22 +139,6 @@
   }
 }
 
-.feedback-contacts__item--disabled {
-  .feedback-contacts__icon {
-    color: @green;
-  }
-}
-
-.feedback-contacts__item--error {
-  .feedback-contacts__field {
-    border-color: @error;
-  }
-
-  .feedback-contacts__icon {
-    color: @error;
-  }
-}
-
 .feedback-contacts__item-title {
   padding-top: 10px;
   padding-right: 10px;
@@ -213,5 +197,27 @@
 .feedback-contacts__field-tel {
   @media (min-width: @width-desktop) {
     padding-left: 17px;
+  }
+}
+
+.feedback-contacts__field:focus,
+.feedback-contacts__item:focus-within {
+  .feedback-contacts__field {
+    outline-offset: -2px;
+    outline: 2px solid @border-field-focus;
+  }
+
+  .feedback-contacts__icon {
+    color: @green;
+  }
+}
+
+.feedback-contacts__item--error {
+  .feedback-contacts__field {
+    border-color: @error;
+  }
+
+  .feedback-contacts__icon {
+    color: @error;
   }
 }
