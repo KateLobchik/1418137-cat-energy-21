@@ -1,10 +1,21 @@
 .goal {
-  margin-bottom: 26px;
-  padding: 26px 20px 28px;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 28px 20px 25px;
   border: 1px solid @decor-line;
   border-right: none;
   border-left: none;
   color: @dark-grey;
+
+  @media (min-width: @width-tablet) {
+    margin: 0 67px 0 71px;
+    padding: 28px 25px 28px;
+    border: 1px solid @decor-line;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin: 0;
+  }
 }
 
 .goal__list {
@@ -12,6 +23,10 @@
   padding: 0;
   padding-left: 46px;
   list-style: none;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 62px;
+  }
 }
 
 .goal__item {
@@ -23,7 +38,73 @@
 }
 
 .goal__label {
+  display: block;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.goal__radio + .goal__label::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -47px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @grey;
+  border-radius: 50%;
+
+  @media (min-width: @width-tablet) {
+    top: -4px;
+    left: -59px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.goal__radio + .goal__label:hover::before,
+.goal__radio:focus + .goal__label::before {
+  border-color: @border-filter-hover;
+}
+
+.goal__radio:checked + .goal__label::before {
+  border-color: @grey;
+}
+
+.goal__radio:checked + .goal__label:hover::before {
+  border-color: @border-filter-hover;
+}
+
+.goal__radio:checked + .goal__label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -38px;
+  width: 14px;
+  height: 14px;
+  background-color: @green;
+  border-radius: 50%;
+
+  @media (min-width: @width-tablet) {
+    top: 7px;
+    left: -48px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.goal__radio:disabled + .goal__label::before {
+  border-color: @border-filter-hover;
+  opacity: 0.3;
+}
+
+.goal__radio:disabled + .goal__label {
+  opacity: 0.3;
 }
