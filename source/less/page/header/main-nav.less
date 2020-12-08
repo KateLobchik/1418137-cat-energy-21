@@ -91,8 +91,10 @@
     opacity: 0.3;
   }
 
-  @media (min-width: @width-desktop) {
-    color: @white;
+  &-index {
+    @media (min-width: @width-desktop) {
+      color: @white;
+    }
   }
 }
 
@@ -115,6 +117,11 @@
 
   @media (min-width: @width-desktop) {
     top: 35px;
+  }
+}
+
+.main-nav__link-index::after {
+  @media (min-width: @width-desktop) {
     background-color: @white;
   }
 }

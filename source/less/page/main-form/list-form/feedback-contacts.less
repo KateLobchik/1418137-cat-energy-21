@@ -1,20 +1,88 @@
+.feedback-contacts::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: @green;
+  z-index: -1;
+
+  @media (min-width: @width-tablet) {
+    top: 97px;
+  }
+
+  @media (min-width: @width-desktop) {
+    top: 90px;
+  }
+}
+
 .feedback-contacts {
+  margin: 0;
   padding: 0;
   border: none;
-  border-top: 2px solid @green;
+  position: relative;
+}
+
+.feedback-contacts__title-container {
+  max-width: @width-desktop;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 0 20px;
+  }
 }
 
 .feedback-contacts__title {
-  width: 187px; /*Не могу никак додуматься как уменьшить ширину блока по его содержимому.. чтобы ширина была адаптивной*/
+  width: fit-content;
   margin: 0;
-  padding: 0 15px 0 20px;
+  padding: 18px 21px 0 19px;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
+  background-color: @white;
+  box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    padding: 75px 42px 0 39px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 67px;
+  }
+}
+
+.feedback-contacts__title-mobile {
+  @media (min-width: @width-tablet) {
+    display: none;
+  }
 }
 
 .feedback-contacts__container {
-  padding: 32px 20px 27px 20px;
+  max-width: @width-desktop;
+  margin: 0 auto;
+  padding: 35px 20px 24px 19px;
+  box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    padding: 76px 65px 65px 68px;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 78px;
+    padding: 76px 60px 69px;
+  }
 }
 
 .feedback-contacts__item {
@@ -23,24 +91,84 @@
   margin: 0;
   margin-bottom: 14px;
   padding: 0;
-
   color: @base-dark-grey;
+  position: relative;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .feedback-contacts__item:last-child {
   margin: 0;
 }
 
+.feedback-contacts__icon-email {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  fill: transparent;
+
+  @media (min-width: @width-tablet) {
+    top: 18px;
+    right: 18px;
+  }
+
+  @media (min-width: @width-desktop) {
+    right: 19px;
+  }
+}
+
+.feedback-contacts__icon-tel {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+
+  @media (min-width: @width-tablet) {
+    top: 16px;
+    right: 19px;
+  }
+
+  @media (min-width: @width-desktop) {
+    top: 16px;
+    right: 17px;
+  }
+}
+
 .feedback-contacts__item-title {
-  padding-right: 9px;
-  align-self: center;
+  padding-top: 10px;
+  padding-right: 10px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: @width-tablet) {
+    padding-right: 16px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 11px;
+  }
 }
 
 .feedback-contacts__title-email {
-  padding-right: 12px;
+  padding-right: 11px;
+
+  @media (min-width: @width-tablet) {
+    padding-right: 19px;
+    padding-left: 3px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-right: 19px;
+    padding-left: 1px;
+  }
 }
 
 .feedback-contacts__field {
@@ -56,4 +184,40 @@
   background-color: transparent;
   border: 1px solid @border-field;
   box-sizing: border-box;
+  position: relative;
+
+  @media (min-width: @width-tablet) {
+    height: 52px;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.feedback-contacts__field-tel {
+  @media (min-width: @width-desktop) {
+    padding-left: 17px;
+  }
+}
+
+.feedback-contacts__field:focus,
+.feedback-contacts__item:focus-within {
+  .feedback-contacts__field {
+    outline-offset: -2px;
+    outline: 2px solid @border-field-focus;
+  }
+
+  .feedback-contacts__icon {
+    color: @green;
+  }
+}
+
+.feedback-contacts__item--error {
+  .feedback-contacts__field {
+    border-color: @error;
+  }
+
+  .feedback-contacts__icon {
+    color: @error;
+  }
 }
