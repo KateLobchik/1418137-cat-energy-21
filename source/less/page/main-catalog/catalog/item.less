@@ -8,22 +8,25 @@
 }
 
 .item__info-item {
-  padding-bottom: 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 9px;
 }
 
-.item__image {
+.item__image-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .item__info {
   padding: 0;
-  width: 100%;
+}
+
+.item__title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
 }
 
 .item__name {
@@ -43,19 +46,39 @@
   font-size: 12px;
   line-height: 16px;
   color: @base-dark-grey;
+  border-spacing: 0;
 }
 
 .item__info-name {
+  margin: 0;
+  padding: 0;
   font-weight: normal;
   text-align: left;
 }
 
 .item__info-data {
+  margin: 0;
+  padding: 0;
   text-align: right;
 }
 
+.item__info-data--weight {
+  padding-right: 2px;
+}
+
+.item__info-data--price {
+  text-transform: uppercase;
+}
+
+.item__button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .item__more {
-  padding: 26px 20px 25px 20px;
+  padding: 26px 20px 24px 20px;
   text-align: center;
   color: @base-dark-grey;
   border-bottom: 1px solid @decor-line;
@@ -64,7 +87,7 @@
 .item__more-title::before {
   content: "";
   position: absolute;
-  bottom: 55px;
+  bottom: 51px;
   left: 125px;
   width: 30px;
   height: 30px;
@@ -77,7 +100,7 @@
 .item__more-title {
   position: relative;
   margin: 0;
-  padding: 53px 0 8px;
+  padding: 51px 0 8px;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
@@ -94,6 +117,10 @@
 
 .item__more-button {
   margin-top: 21px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
   color: inherit;
   background-color: @button-more;
 }
