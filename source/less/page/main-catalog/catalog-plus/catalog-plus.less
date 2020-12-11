@@ -7,6 +7,14 @@
   height: 2px;
   background-color: @green;
   z-index: -1;
+
+  @media (min-width: @width-tablet) {
+    top: 88px;
+  }
+
+  @media (min-width: @width-desktop) {
+    top: 97px;
+  }
 }
 
 .catalog-plus {
@@ -14,7 +22,18 @@
 }
 
 .catalog-plus__title-container {
+  max-width: @width-desktop;
+  margin: 0 auto;
   padding: 0;
+  box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 0 20px;
+  }
 }
 
 .catalog-plus__title {
@@ -25,13 +44,41 @@
   font-size: 24px;
   line-height: 24px;
   background-color: @white;
+
+  @media (min-width: @width-tablet) {
+    padding: 66px 36px 80px 37px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 74px 34px 80px 39px;
+  }
 }
 
 .catalog-plus__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  max-width: @width-desktop;
+  margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 79px;
+    padding: 0 60px 86px;
+  }
 }
 
-.catalog-plus__present-container::before {
+.catalog-plus__present::before {
   content: "";
   position: absolute;
   top: 58px;
@@ -42,14 +89,43 @@
   background-size: 78px 80px;
   background-position: 0 0;
   background-repeat: no-repeat;
+
+  @media (min-width: @width-tablet) {
+    top: 58px;
+    left: 78px;
+    width: 80px;
+    height: 82px;
+    background-size: 80px 82px;
+  }
+
+  @media (min-width: @width-desktop) {
+    top: 56px;
+    left: 84px;
+  }
 }
 
 .catalog-plus__present {
+  align-self: center;
+  width: fit-content;
   position: relative;
   margin: 39px 0 35px;
-  padding: 186px 61px 43px 58px;
+  padding: 187px 61px 42px 58px;
   text-align: center;
   background-image: image-set(url("../img/gift/gift-photo-mobile.jpg") 1x, url("../img/gift/gift-photo-mobile@2x.jpg") 2x);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+
+  @media (min-width: @width-tablet) {
+    margin: 68px 0 76px;
+    padding: 72px 124px 68px 423px;
+    background-image: image-set(url("../img/gift/gift-photo-tablet.jpg") 1x, url("../img/gift/gift-photo-tablet@2x.jpg") 2x);
+  }
+
+  @media (min-width: @width-desktop) {
+    margin: 0;
+    padding: 185px 43px 42px 41px;
+    background-image: image-set(url("../img/gift/gift-photo-desktop.jpg") 1x, url("../img/gift/gift-photo-desktop@2x.jpg") 2x);
+  }
 }
 
 .catalog-plus__present-slogan {
@@ -59,4 +135,12 @@
   line-height: 20px;
   text-align: center;
   color: @white;
+
+  @media (min-width: @width-tablet) {
+    text-align: left;
+  }
+
+  @media (min-width: @width-desktop) {
+    text-align: center;
+  }
 }
