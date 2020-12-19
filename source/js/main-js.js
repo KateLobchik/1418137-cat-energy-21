@@ -1,3 +1,5 @@
+//Header
+
 const navButton = document.querySelector(".page-header__nav-toggle");
 const navMain = document.querySelector(".main-nav");
 
@@ -16,4 +18,24 @@ navButton.addEventListener("click", function (evt) {
     navButton.classList.add('page-header__nav-toggle--closed');
     navButton.classList.remove('page-header__nav-toggle--active');
   }
+});
+
+
+//Slider
+
+const buttonPast = document.querySelector(".example__button-past");
+const slidePast = document.querySelector(".example__slide-past");
+const buttonPresent = document.querySelector(".example__button-present");
+const slidePresent = document.querySelector(".example__slide-present");
+
+buttonPast.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  slidePast.classList.add("example__slide--active");
+  slidePresent.classList.remove("example__slide--active");
+});
+
+buttonPresent.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  slidePresent.classList.add("example__slide--active");
+  slidePast.classList.remove("example__slide--active");
 });
