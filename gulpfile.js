@@ -76,7 +76,7 @@ exports.images = images;
 //WebP
 
 const imagewebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("build/img/**/*.{jpg,png}")
     .pipe(webp({ quality: 85 }))
     .pipe(gulp.dest("build/img"));
 }
@@ -86,10 +86,10 @@ exports.imagewebp = imagewebp;
 //Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/icons/*.svg")
+  return gulp.src("build/img/icons/**/*.svg")
     .pipe(svgsprite())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(rename("sprite-icons.svg"))
+    .pipe(gulp.dest("build/img/icons"));
 }
 
 exports.sprite = sprite;
@@ -99,8 +99,7 @@ exports.sprite = sprite;
 const scripts = () => {
   return gulp.src("source/js/*.js")
     .pipe(jsmin())
-    .pipe(rename("main-js.min.js"))
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("build/js/min"))
     .pipe(sync.stream());
 }
 
@@ -109,7 +108,7 @@ exports.scripts = scripts;
 //Clean
 
 const clean = () => {
-  return del("dist");
+  return del("build");
 }
 
 exports.clean = clean;
@@ -135,7 +134,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/js/main-js.js", gulp.series("scripts"));
+  gulp.watch("source/js/*.js", gulp.series("scripts"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
 
@@ -149,9 +148,11 @@ const build = gulp.series(
     html,
     copy,
     styles,
-    imagewebp,
-    sprite,
     scripts
+  ),
+  gulp.parallel(
+    imagewebp,
+    sprite
   )
 )
 
@@ -165,9 +166,11 @@ exports.default = gulp.series(
     html,
     copy,
     styles,
-    imagewebp,
-    sprite,
     scripts
+  ),
+  gulp.parallel(
+    imagewebp,
+    sprite
   ),
   gulp.series(
     server,

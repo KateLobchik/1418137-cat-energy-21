@@ -9,7 +9,7 @@
   }
 
   @media (min-width: @width-desktop) {
-    padding: 19px 0 15px;
+    padding: 17px 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,6 +43,13 @@
   }
 }
 
+.plus-item:nth-of-type(3) {
+  @media (min-width: @width-desktop) {
+    padding-top: 18px;
+    padding-bottom: 16px;
+  }
+}
+
 .plus-item__info-container {
   @media (min-width: @width-tablet) {
     width: 100%;
@@ -63,6 +70,7 @@
 
 .plus-item__name {
   display: block;
+  width: fit-content;
   padding-bottom: 13px;
   padding-left: 1px;
   font-weight: normal;
@@ -135,11 +143,11 @@
     width: auto;
     padding-right: 40px;
   }
+}
 
-  &--2 {
-    @media (min-width: @width-desktop) {
-      padding-right: 46px;
-    }
+.plus-item__info-price--2 {
+  @media (min-width: @width-desktop) {
+    padding-right: 46px;
   }
 }
 

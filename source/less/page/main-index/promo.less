@@ -1,6 +1,6 @@
 .promo {
   display: grid;
-  grid-template-rows: 302px 1fr;
+  grid-template-rows: 301px 1fr;
 }
 
 .promo__background {
@@ -11,6 +11,20 @@
   background-image: image-set(url("../img/index-background-desktop.jpg") 1x, url("../img/index-background-desktop@2x.jpg") 2x);
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: @width-tablet) {
+    display: none;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    height: 694px;
+    z-index: -2;
+  }
 }
 
 .promo__background-color {
@@ -36,15 +50,51 @@
   @media (min-width: 500px) {
     padding: 0 30px;
   }
+
+  @media (min-width: @width-tablet) {
+    display: grid;
+    grid-row: auto auto auto 1fr;
+    margin: 0 auto;
+    padding: 0 30px;
+    color: @black;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: @width-desktop;
+    margin: 0 auto;
+    margin-bottom: 82px;
+    padding: 0 60px;
+    box-sizing: border-box;
+  }
 }
 
 .promo__title {
   margin: 0;
-  padding: 28px 0 25px;
+  padding: 27px 0 25px;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: @width-tablet) {
+    max-width: 450px;
+    padding: 41px 0 41px 87px;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  @media (min-width: @width-desktop) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 82px 0 40px 80px;
+  }
 }
 
 .promo__slogan {
@@ -54,13 +104,28 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: @width-tablet) {
+    margin: 0;
+    padding: 0 0 20px 87px;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: @width-desktop) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0 0 52px 80px;
+  }
 }
 
 .promo__button {
   display: block;
   width: 100%;
-  margin-top: 3px;
-  padding: 11px 0 10px;
+  padding: 11px 0 11px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -70,60 +135,7 @@
   background-color: @green;
   order: 1;
 
-  &:hover,
-  &:focus {
-    background-color: @dark-green;
-    cursor: pointer;
-  }
-
-  &:active {
-    color: @white-30;
-    background-color: @dark-green;
-    cursor: pointer;
-  }
-}
-
-.promo__container-image {
-  width: 280px;
-  height: 270px;
-}
-
-.promo__image {
-  width: 100%;
-  height: auto;
-}
-
-@media (min-width: @width-tablet) {
-  .promo__background {
-    display: none;
-  }
-
-  .promo__container {
-    display: grid;
-    grid-row: auto auto auto 1fr;
-    margin: 0 auto;
-    padding: 0 30px;
-    color: @black;
-  }
-
-  .promo__title {
-    max-width: 450px;
-    padding: 41px 0 41px 87px;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 60px;
-    text-align: left;
-  }
-
-  .promo__slogan {
-    margin: 0;
-    padding: 0 0 20px 87px;
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
-  }
-
-  .promo__button {
+  @media (min-width: @width-tablet) {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
@@ -138,7 +150,35 @@
     order: 0;
   }
 
-  .promo__container-image {
+  @media (min-width: @width-desktop) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: block;
+    width: fit-content;
+    margin: 0;
+    margin-left: 80px;
+    padding: 17px 26px;
+    box-sizing: border-box;
+    order: 0;
+  }
+}
+
+.promo__button:hover,
+.promo__button:focus {
+  background-color: @dark-green;
+  cursor: pointer;
+}
+
+.promo__button:active {
+  color: @white-30;
+  background-color: @dark-green;
+  cursor: pointer;
+}
+
+.promo__container-image {
+  @media (min-width: @width-tablet) {
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 1;
@@ -147,7 +187,26 @@
     height: 609px;
     z-index: -1;
   }
+
+  @media (min-width: @width-desktop) {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 552px;
+    height: 499px;
+    padding: 0 0 54px 41px;
+    z-index: -1;
+  }
 }
+
+.promo__image {
+  @media (min-width: @width-tablet) {
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 @media (min-width: @width-desktop) {
   .promo__background {

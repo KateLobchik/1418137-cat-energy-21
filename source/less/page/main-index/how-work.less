@@ -117,13 +117,24 @@
   align-items: center;
   min-height: 60px;
   margin: 0;
+  padding-right: 5px;
+
+  @media (min-width: @width-tablet) {
+    padding-right: 0;
+  }
 }
 
-.how-work__description br {
+.how-work__description-br {
   display: none;
 
   @media (min-width: @width-tablet) {
-    display: inline;
+    display: inline-block;
+  }
+}
+
+.how-work__description-space {
+  @media (min-width: @width-desktop) {
+    display: none;
   }
 }
 
