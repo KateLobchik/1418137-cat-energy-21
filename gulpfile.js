@@ -10,7 +10,7 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgsprite = require("gulp-svgstore");
-const jsmin = require("gulp-uglify");
+const uglify = require('gulp-uglify-es').default;
 const del = require("del");
 const sync = require("browser-sync").create();
 
@@ -51,7 +51,7 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(sourcemap.write("."))
+    .pipe(sourcemap.write("build/css"))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -98,7 +98,7 @@ exports.sprite = sprite;
 
 const scripts = () => {
   return gulp.src("source/js/*.js")
-    .pipe(jsmin())
+    .pipe(uglify())
     .pipe(gulp.dest("build/js/min"))
     .pipe(sync.stream());
 }
