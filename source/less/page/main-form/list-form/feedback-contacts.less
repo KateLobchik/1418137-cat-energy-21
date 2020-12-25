@@ -210,15 +210,6 @@
   color: @error;
 }
 
-.feedback-contacts__field:placeholder-shown {
-  outline-offset: -2px;
-  outline: 2px solid @border-field;
-}
-
-.feedback-contacts__field:placeholder-shown + .feedback-contacts__icon {
-  color: @black;
-}
-
 .feedback-contacts__field:focus,
 .feedback-contacts__item:focus-within {
   .feedback-contacts__field {
@@ -228,16 +219,5 @@
 
   .feedback-contacts__icon {
     color: @green;
-  }
-}
-
-.feedback-contacts__field--error {
-  .feedback-contacts__field {
-    outline-offset: -2px;
-    outline: 2px solid @error;
-  }
-
-  .feedback-contacts__field:placeholder-shown + .feedback-contacts__icon {
-    color: @error;
   }
 }
