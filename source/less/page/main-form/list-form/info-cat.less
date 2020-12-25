@@ -1,7 +1,7 @@
 .info-cat {
   width: 100%;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
   padding: 0 19px;
   border: none;
   color: @base-dark-grey;
@@ -47,10 +47,14 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 9px;
+  }
 }
 
 .info-cat__item-title-first:first-of-type {
-  padding-right: 17px;
+  padding-right: 15px;
 }
 
 .info-cat__field {
@@ -72,6 +76,17 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 11px;
+    padding-left: 20px;
+  }
+}
+
+.cat-age {
+  @media (min-width: @width-desktop) {
+    padding-left: 16px;
+  }
 }
 
 .info-cat__field:hover {
@@ -81,4 +96,9 @@
 .info-cat__field:focus {
   outline-offset: -1px;
   outline: 1px solid @border-field-focus;
+}
+
+.info-cat__field--error {
+  outline-offset: -2px;
+  outline: 2px solid @error;
 }

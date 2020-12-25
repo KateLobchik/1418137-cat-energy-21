@@ -1,24 +1,24 @@
-.catalog-plus::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: @green;
-  z-index: -1;
-
-  @media (min-width: @width-tablet) {
-    top: 88px;
-  }
-
-  @media (min-width: @width-desktop) {
-    top: 97px;
-  }
-}
-
 .catalog-plus {
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: @green;
+    z-index: -1;
+
+    @media (min-width: @width-tablet) {
+      top: 88px;
+    }
+
+    @media (min-width: @width-desktop) {
+      top: 97px;
+    }
+  }
 }
 
 .catalog-plus__title-container {
@@ -78,32 +78,6 @@
   }
 }
 
-.catalog-plus__present::before {
-  content: "";
-  position: absolute;
-  top: 58px;
-  left: 101px;
-  width: 78px;
-  height: 80px;
-  background-image: url("../img/icons/icon-gift.svg");
-  background-size: 78px 80px;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-
-  @media (min-width: @width-tablet) {
-    top: 58px;
-    left: 78px;
-    width: 80px;
-    height: 82px;
-    background-size: 80px 82px;
-  }
-
-  @media (min-width: @width-desktop) {
-    top: 56px;
-    left: 84px;
-  }
-}
-
 .catalog-plus__present {
   align-self: center;
   width: fit-content;
@@ -126,6 +100,32 @@
     margin: 0;
     padding: 185px 43px 42px 41px;
     background-image: image-set(url("../img/gift/gift-photo-desktop.png") 1x, url("../img/gift/gift-photo-desktop@2x.png") 2x);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 101px;
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/icons/icon-gift.svg");
+    background-size: 78px 80px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    @media (min-width: @width-tablet) {
+      top: 58px;
+      left: 78px;
+      width: 80px;
+      height: 82px;
+      background-size: 80px 82px;
+    }
+
+    @media (min-width: @width-desktop) {
+      top: 56px;
+      left: 84px;
+    }
   }
 }
 

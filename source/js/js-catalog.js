@@ -21,21 +21,9 @@ navButton.addEventListener("click", function (evt) {
 });
 
 
-//Slider
+//Map
+const interactiveMap = document.querySelector(".contacts-map--interactive");
+const imgMap = document.querySelector(".contacts-map--img");
 
-const buttonPast = document.querySelector(".example__button-past");
-const slidePast = document.querySelector(".example__slide-past");
-const buttonPresent = document.querySelector(".example__button-present");
-const slidePresent = document.querySelector(".example__slide-present");
-
-buttonPast.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slidePast.classList.add("example__slide--active");
-  slidePresent.classList.remove("example__slide--active");
-});
-
-buttonPresent.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slidePresent.classList.add("example__slide--active");
-  slidePast.classList.remove("example__slide--active");
-});
+imgMap.classList.remove('contacts-map--active');
+interactiveMap.classList.add('contacts-map--active');
