@@ -30,12 +30,14 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
+    padding: 43px 0 8px;
     font-family: @font-regular;
     font-size: 18px;
     line-height: 24px;
   }
 
   @media (min-width: @width-desktop) {
+    padding: 69px 0 22px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -48,13 +50,13 @@
 
   @media (min-width: @width-tablet) {
     margin-left: 35px;
-    padding: 41px 0 30px;
+    padding: 0;
+    padding-bottom: 20px;
     border: none;
   }
 
   @media (min-width: @width-desktop) {
     margin-left: 35px;
-    padding: 69px 0 42px;
     border: none;
   }
 }
@@ -92,7 +94,7 @@
   opacity: 0.3;
 }
 
-.main-nav__list-item--active {
+.main-nav__link--active {
   position: relative;
 
   &::after {

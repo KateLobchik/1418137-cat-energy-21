@@ -18,11 +18,11 @@
   <header class="page-header">
     <div class="page-header__container">
       <div class="page-header__container-logo">
-        <div class="page-header__logo-link">
+        <div class="page-header__logo">
           <picture>
             <source media="(min-width: 1340px)" srcset="img/icons/logo/desktop-logo.svg">
             <source media="(min-width: 768px)" srcset="img/icons/logo/tablet-logo.svg">
-            <img class="page-header__logo" src="img/icons/logo/mobile-logo-text.svg" width="101" height="18"
+            <img class="page-header__logo-img" src="img/icons/logo/mobile-logo-text.svg" width="101" height="18"
               alt="Кэт энерджи">
           </picture>
         </div>
@@ -34,7 +34,7 @@
         <div class="main-nav__container">
           <ul class="main-nav__list">
             <li class="main-nav__list-item">
-              <a class="main-nav__link main-nav__link-index main-nav__list-item--active" href="index.html">Главная</a>
+              <a class="main-nav__link main-nav__link-index main-nav__link--active" href="index.html">Главная</a>
             </li>
             <li class="main-nav__list-item">
               <a class="main-nav__link main-nav__link-index" href="catalog.html">Каталог продукции</a>
@@ -53,16 +53,13 @@
     <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков</h1>
 
     <section class="promo">
-      <div class="promo__background">
-        <div class="promo__background-color"></div>
-      </div>
       <div class="promo__container">
         <h2 class="promo__title">
           Функциональное<br>
           питание для котов
         </h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <a class="promo__button" href="program.html">Подобрать программу</a>
+        <a class="promo__button" href="form.html">Подобрать программу</a>
         <div class="promo__container-image">
           <picture>
             <source type="image/webp" media="(min-width: 1340px)"
@@ -115,29 +112,28 @@
         <ul class="how-work__list">
           <li class="how-work__item how-work__item--native">
             <p class="how-work__description">
-              Функциональное питание<br>
-              содержит только полезные <br>
+              Функциональное питание
+              содержит только полезные
               питательные вещества.
             </p>
           </li>
           <li class="how-work__item how-work__item--cook">
             <p class="how-work__description">
-              Выпускается в виде порошка, <br>
-              который нужно лишь залить <br>
+              Выпускается в виде порошка,
+              который нужно лишь залить
               кипятком и готово.
             </p>
           </li>
           <li class="how-work__item how-work__item--meal">
             <p class="how-work__description">
-              Замените один-два приема <br>
-              обычной еды на наше <br>
+              Замените один-два приема
+              обычной еды на наше
               функциональное питание.
             </p>
           </li>
           <li class="how-work__item how-work__item--result">
             <p class="how-work__description">
-              Уже через месяц наслаждайтесь<span class="how-work__description-space">&nbsp;</span><br
-                class="how-work__description-br">
+              Уже через месяц наслаждайтесь
               изменениями к лучшему&nbsp;<br class="how-work__description-br">
               вашего питомца!
             </p>
@@ -192,18 +188,20 @@
 
           <ol class="example__slides">
             <!--Слайды-->
-            <li class="example__slide example__slide-past example__slide--active">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider/before.webp 1x, img/slider/before@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/slider/before-mobile.webp 1x, img/slider/before-mobile@2x.webp 2x">
+            <li class="example__slide example__slide-past">
+              <div class="example__container-past">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/slider/before.webp 1x, img/slider/before@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/slider/before-mobile.webp 1x, img/slider/before-mobile@2x.webp 2x">
 
-                <source media="(min-width: 768px)" srcset="img/slider/before.png 1x, img/slider/before@2x.png 2x">
-                <img class="example__slide-img--past" src="img/slider/before-mobile.png"
-                  srcset="img/slider/before-mobile@2x.png 2x" width="311" height="232"
-                  alt="Фотография Бориса до употребления Кэт энерджи">
-              </picture>
+                  <source media="(min-width: 768px)" srcset="img/slider/before.png 1x, img/slider/before@2x.png 2x">
+                  <img class="example__img-past" src="img/slider/before-mobile.png"
+                    srcset="img/slider/before-mobile@2x.png 2x" width="311" height="232"
+                    alt="Фотография Бориса до употребления Кэт энерджи">
+                </picture>
+              </div>
             </li>
             <li class="example__slide example__slide-present">
               <picture>
@@ -213,7 +211,7 @@
 
                 <source media="(min-width: 1340px)" srcset="img/slider/after.png 1x, img/slider/after@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/slider/after.png 1x, img/slider/after@2x.png 2x">
-                <img class="example__slide-img--present" src="img/slider/after-mobile.png"
+                <img class="example__img-present" src="img/slider/after-mobile.png"
                   srcset="img/slider/after-mobile@2x.png 2x" width="251" height="240"
                   alt="Фотография Бориса после употребления Кэт энерджи" loading="lazy">
               </picture>
@@ -226,8 +224,7 @@
               <span class="example__button-line">Было</span>
             </button>
             <div class="example__range">
-              <button class="example__range-toggle" tabindex="-1" type="button"
-                aria-label="Ползунок для стравнения фото"></button>
+              <button class="example__range-toggle" type="button" aria-label="Ползунок для стравнения фото"></button>
               <div class="example__range-scale">
                 <div class="example__range-bar"></div>
               </div>
@@ -297,21 +294,21 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#" aria-label="Вконтакте">
-                <svg class="social__link--vkontakte" width="23" height="16">
+                <svg class="social__link-vkontakte" width="23" height="16">
                   <use href="img/icons/sprite-icons.svg#icon-vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" aria-label="Инстаграм">
-                <svg class="social__link--instagram" width="16" height="16">
+                <svg class="social__link-instagram" width="16" height="16">
                   <use href="img/icons/sprite-icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" aria-label="Фейсбук">
-                <svg class="social__link--facebook" width="22" height="22">
+                <svg class="social__link-facebook" width="22" height="22">
                   <use href="img/icons/sprite-icons.svg#icon-facebook"></use>
                 </svg>
               </a>

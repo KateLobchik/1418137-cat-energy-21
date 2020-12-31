@@ -154,7 +154,7 @@ const build = gulp.series(
     imagewebp,
     sprite
   )
-)
+);
 
 exports.build = build;
 

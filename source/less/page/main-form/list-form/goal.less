@@ -1,6 +1,4 @@
 .goal {
-  margin: 0;
-  margin-bottom: 8px;
   padding: 29px 20px 25px;
   border: 1px solid @decor-line;
   border-right: none;
@@ -8,13 +6,8 @@
   color: @dark-grey;
 
   @media (min-width: @width-tablet) {
-    margin: 0 67px 0 71px;
     padding: 28px 25px 28px;
     border: 1px solid @decor-line;
-  }
-
-  @media (min-width: @width-desktop) {
-    margin: 0;
   }
 }
 
@@ -69,11 +62,6 @@
   }
 }
 
-.goal__radio + .goal__label:hover::before,
-.goal__radio:focus + .goal__label::before {
-  border-color: @border-filter-hover;
-}
-
 .goal__radio:checked + .goal__label::before {
   border-color: @grey;
 }
@@ -99,6 +87,15 @@
     height: 18px;
   }
 }
+
+.goal__radio + .goal__label:hover::before {
+  border-color: @border-filter-hover;
+}
+
+.goal__radio:focus + .goal__label::before {
+  border-color: @base-dark-grey;
+}
+
 
 .goal__radio:disabled + .goal__label::before {
   border-color: @border-filter-hover;

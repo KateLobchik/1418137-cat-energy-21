@@ -20,7 +20,7 @@
   }
 }
 
-.client-comment__title-container {
+.client-comment__container {
   max-width: @width-desktop;
   width: 100%;
   margin: 0 auto;
@@ -58,18 +58,19 @@
   }
 }
 
-.client-comment__container {
+.client-comment__field-container {
   max-width: @width-desktop;
+  width: 100%;
   margin: 0 auto;
   padding: 38px 19px 20px 19px;
   box-sizing: border-box;
 
   @media (min-width: @width-tablet) {
-    padding: 76px 67px 62px 70px;
+    padding: 76px 37px 62px 40px;
   }
 
   @media (min-width: @width-desktop) {
-    padding: 76px 60px 63px;
+    padding: 76px 40px 63px;
   }
 }
 
@@ -96,4 +97,22 @@
   @media (min-width: @width-desktop) {
     padding: 8px 18px;
   }
+}
+
+.client-comment__field:hover {
+  border-color: @border-field-hover;
+}
+
+.client-comment__field:focus {
+  outline-offset: -2px;
+  outline: 2px solid @border-field-focus;
+}
+
+.client-comment__field::placeholder {
+  color: @input-placeholder;
+}
+
+.client-comment__field::-moz-placeholder {
+  color: @input-placeholder;
+  opacity: 1;
 }

@@ -1,19 +1,15 @@
 .info-cat {
   width: 100%;
-  margin: 0;
-  margin-bottom: 23px;
   padding: 0 19px;
   border: none;
   color: @base-dark-grey;
   box-sizing: border-box;
 
   @media (min-width: @width-tablet) {
-    margin-bottom: 72px;
     padding: 0 67px 0 71px;
   }
 
   @media (min-width: @width-desktop) {
-    margin: 0;
     padding: 0;
   }
 }
@@ -94,11 +90,33 @@
 }
 
 .info-cat__field:focus {
-  outline-offset: -1px;
-  outline: 1px solid @border-field-focus;
+  outline-offset: -2px;
+  outline: 2px solid @border-field-focus;
 }
 
 .info-cat__field:invalid {
   outline-offset: -2px;
   outline: 2px solid @error;
+}
+
+.info-cat__field::placeholder {
+  color: @input-placeholder;
+}
+
+.info-cat__field::-moz-placeholder {
+  color: @input-placeholder;
+  opacity: 1;
+}
+
+.cat-weight::-webkit-outer-spin-button,
+.cat-weight::-webkit-inner-spin-button,
+.cat-age::-webkit-outer-spin-button,
+.cat-age::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.cat-weight,
+.cat-age {
+  appearance: textfield;
 }

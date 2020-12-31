@@ -1,5 +1,4 @@
 .feedback-contacts {
-  margin: 0;
   padding: 0;
   border: none;
   position: relative;
@@ -7,24 +6,24 @@
   &::before {
     content: "";
     position: absolute;
-    top: 34px;
-    left: 0;
-    width: 100%;
+    top: 16px;
+    left: -100vw;
+    width: 200vw;
     height: 2px;
     background-color: @green;
     z-index: -1;
 
     @media (min-width: @width-tablet) {
-      top: 97px;
+      top: 22px;
     }
 
     @media (min-width: @width-desktop) {
-      top: 90px;
+      top: 24px;
     }
   }
 }
 
-.feedback-contacts__title-container {
+.feedback-contacts__container {
   max-width: @width-desktop;
   width: 100%;
   margin: 0 auto;
@@ -44,7 +43,7 @@
   display: block;
   width: fit-content;
   margin: 0;
-  padding: 18px 21px 0 19px;
+  padding: 0 17px 0 19px;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
@@ -52,37 +51,35 @@
   box-sizing: border-box;
 
   @media (min-width: @width-tablet) {
-    padding: 75px 42px 0 39px;
+    padding: 0 42px 0 39px;
     font-size: 36px;
     line-height: 36px;
   }
 
   @media (min-width: @width-desktop) {
-    padding-top: 68px;
+    padding-top: 0;
   }
 }
 
-.feedback-contacts__title-mobile {
+.feedback-contacts__title-br {
   @media (min-width: @width-tablet) {
     display: none;
   }
 }
 
-.feedback-contacts__container {
-  max-width: @width-desktop;
-  margin: 0 auto;
+.feedback-contacts__field-container {
   padding: 35px 20px 24px 19px;
   box-sizing: border-box;
 
   @media (min-width: @width-tablet) {
-    padding: 76px 65px 65px 68px;
+    padding: 76px 35px 65px 38px;
   }
 
   @media (min-width: @width-desktop) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 78px;
-    padding: 76px 60px 69px;
+    padding: 76px 40px 69px;
   }
 }
 
@@ -220,4 +217,13 @@
   .feedback-contacts__icon {
     color: @green;
   }
+}
+
+.feedback-contacts__field::placeholder {
+  color: @input-placeholder;
+}
+
+.feedback-contacts__field::-moz-placeholder {
+  color: @input-placeholder;
+  opacity: 1;
 }

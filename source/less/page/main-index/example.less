@@ -1,5 +1,18 @@
 .example {
   position: relative;
+  box-sizing: border-box;
+
+  &::before {
+    @media (min-width: @width-desktop) {
+      content: "";
+      position: absolute;
+      top: 194px;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      background-color: @background-section-example;
+    }
+  }
 
   &::after {
     content: "";
@@ -8,8 +21,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: @background-section-example;
-    z-index: -1;
+    background-color: @background-section-example-2;
+    z-index: -2;
 
     @media (min-width: @width-tablet) {
       top: 619px;
@@ -52,7 +65,7 @@
   }
 
   @media (min-width: @width-desktop) {
-    padding: 58px 134px 72px 0;
+    padding: 58px 170px 72px 0;
   }
 }
 
@@ -129,8 +142,9 @@
   min-width: 124px;
   margin: 0;
   margin-bottom: 34px;
-  padding: 13px 15px 17px;
+  padding: 15px 15px 17px;
   text-align: center;
+  font-weight: normal;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -157,7 +171,7 @@
 
 .example__description-container {
   position: absolute;
-  top: 46px;
+  top: 49px;
   left: 0;
   display: flex;
   justify-content: space-around;
@@ -170,7 +184,7 @@
   }
 
   @media (min-width: @width-tablet) {
-    top: 64px;
+    top: 63px;
   }
 
   @media (min-width: @width-desktop) {
@@ -184,7 +198,7 @@
   font-size: 12px;
   line-height: 12px;
   text-transform: lowercase;
-  background-color: @background-section-example;
+  background-color: @background-section-example-2;
   box-sizing: border-box;
 
   @media (min-width: @width-tablet) {
@@ -199,7 +213,7 @@
   }
 
   @media (min-width: @width-desktop) {
-    background-color: @background-section-example;
+    background-color: @background-section-example-2;
   }
 }
 
@@ -275,7 +289,10 @@
   }
 
   @media (min-width: @width-desktop) {
-    width: 690px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    width: 656px;
     height: 656px;
     margin: 0;
   }
@@ -294,21 +311,58 @@
   }
 
   @media (min-width: @width-desktop) {
+    width: 650px;
     min-height: 659px;
-    min-width: 650px;
+    position: relative;
   }
 }
 
 .example__slide {
-  display: none;
+  z-index: 1;
+
+  @media (min-width: @width-desktop) {
+    width: 650px;
+    height: 659px;
+  }
+}
+
+.example__slide-past {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+
+  @media (min-width: @width-tablet) {
+    width: 50%;
+    overflow: hidden;
+  }
+
+  @media (min-width: @width-desktop) {
+    background-color: @background-section-example-2;
+  }
 }
 
-.example__slide--active {
-  display: block;
+.example__container-past {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  @media (min-width: @width-desktop) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 194px;
+      background-color: @white;
+      z-index: -1;
+    }
+  }
 }
 
-.example__slide-img--past {
+.example__img-past {
   padding-right: 8px;
 
   @media (min-width: @width-tablet) {
@@ -316,28 +370,44 @@
     height: 522px;
     padding-top: 19px;
     padding-right: 0;
+    padding-left: 15px;
   }
 
   @media (min-width: @width-desktop) {
-    padding-top: 0;
+    margin-left: -57px;
+    padding-top: 2px;
     padding-right: 8px;
   }
 }
 
-.example__slide-img--present {
+.example__slide-present {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+
+  @media (min-width: @width-tablet) {
+    width: 50%;
+  }
+}
+
+.example__img-present {
   padding-top: 2px;
   padding-left: 3px;
 
   @media (min-width: @width-tablet) {
+    float: right;
     width: auto;
     height: 522px;
     padding-top: 19px;
-    padding-left: 49px;
+    padding-right: 53px;
   }
 
   @media (min-width: @width-desktop) {
     padding-top: 2px;
-    padding-right: 8px;
+    padding-right: 53px;
   }
 }
 
@@ -350,6 +420,7 @@
   width: 100%;
   padding: 0 50px 0 53px;
   box-sizing: border-box;
+  z-index: 1;
 
   @media (min-width: @width-tablet) {
     bottom: 35px;
@@ -358,7 +429,7 @@
 
   @media (min-width: @width-desktop) {
     bottom: 67px;
-    padding: 0 35px 0 69px;
+    padding: 0 35px;
   }
 }
 
@@ -368,11 +439,16 @@
   align-items: center;
   padding: 0 2px;
   position: relative;
+
+  @media (min-width: @width-tablet) {
+    padding: 0;
+  }
 }
 
 .example__range-toggle {
   position: absolute;
-  left: 32px;
+  left: 50%;
+  transform: translateX(-15px);
   width: 20px;
   height: 20px;
   border: 1px dashed transparent;
@@ -381,7 +457,6 @@
   cursor: pointer;
 
   @media (min-width: @width-tablet) {
-    left: 200px;
     width: 32px;
     height: 32px;
     padding: 0;
@@ -395,7 +470,8 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 1px @grey, 0 2px 4px rgba(0, 0, 0, 0.19);
+      box-shadow: 0 0 0 1px @base-dark-grey-30, 0 2px 4px rgba(0, 0, 0, 0.3);
+      /*Сделала фокус более явным, чем на макете*/
     }
 
     &:active {
@@ -472,6 +548,7 @@
 
     &:active {
       border: none;
+      padding-bottom: 2px;
     }
   }
 }
