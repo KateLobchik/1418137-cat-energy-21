@@ -19,7 +19,7 @@ const sync = require("browser-sync").create();
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"));
 }
 
 exports.html = html;
@@ -34,7 +34,7 @@ const copy = () => {
     {
       base: "source"
     })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"));
 }
 
 exports.copy = copy;
@@ -51,9 +51,9 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(sourcemap.write("build/css"))
+    .pipe(sourcemap.write("docs/css"))
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(sync.stream());
 }
 
@@ -68,7 +68,7 @@ const images = () => {
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("docs/img"));
 }
 
 exports.images = images;
@@ -76,9 +76,9 @@ exports.images = images;
 //WebP
 
 const imagewebp = () => {
-  return gulp.src("build/img/**/*.{jpg,png}")
+  return gulp.src("docs/img/**/*.{jpg,png}")
     .pipe(webp({ quality: 85 }))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("docs/img"));
 }
 
 exports.imagewebp = imagewebp;
@@ -86,10 +86,10 @@ exports.imagewebp = imagewebp;
 //Sprite
 
 const sprite = () => {
-  return gulp.src("build/img/icons/**/*.svg")
+  return gulp.src("docs/img/icons/**/*.svg")
     .pipe(svgsprite())
     .pipe(rename("sprite-icons.svg"))
-    .pipe(gulp.dest("build/img/icons"));
+    .pipe(gulp.dest("docs/img/icons"));
 }
 
 exports.sprite = sprite;
@@ -99,7 +99,7 @@ exports.sprite = sprite;
 const scripts = () => {
   return gulp.src("source/js/*.js")
     .pipe(uglify())
-    .pipe(gulp.dest("build/js/min"))
+    .pipe(gulp.dest("docs/js/min"))
     .pipe(sync.stream());
 }
 
@@ -108,7 +108,7 @@ exports.scripts = scripts;
 //Clean
 
 const clean = () => {
-  return del("build");
+  return del("docs");
 }
 
 exports.clean = clean;
@@ -119,7 +119,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'docs'
     },
     cors: true,
     notify: false,
