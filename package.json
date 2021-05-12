@@ -20,7 +20,7 @@
     "gulp-uglify-es": "1.0.4",
     "gulp-uglify-js": "0.0.4",
     "gulp-webp": "^4.0.1",
-    "postcss": "8.1.7",
+    "postcss": "8.2.10",
     "postcss-csso": "^5.0.0",
     "stylelint": "13.7.2",
     "stylelint-config-htmlacademy": "0.1.4"
